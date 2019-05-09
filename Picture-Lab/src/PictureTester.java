@@ -113,7 +113,7 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
-	 // testMirrorHorizontal();
+	 //testMirrorHorizontal();
 	  //testMirrorHorizontalBotToTop();
 	 //testMirrorVerticalRightToLeft();
     //testMirrorTemple();
@@ -121,7 +121,7 @@ public class PictureTester
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
-    //testCopy();
+    testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
@@ -131,4 +131,10 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
   }
+
+private static void testCopy()
+	{
+		// TODO Auto-generated method stub
+		
+	}
 }
