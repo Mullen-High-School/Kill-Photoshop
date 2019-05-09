@@ -139,6 +139,7 @@ public class PictureTester
 	//mirrorDiagonal();
 	//mirrorArms();
     negate();
+    //addeddd
     //grayscale();
     //fixUnderwater();
     //testKeepOnlyBlue();
