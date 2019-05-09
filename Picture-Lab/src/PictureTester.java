@@ -148,7 +148,7 @@ public class PictureTester
     //testGrayscale();
     //fixUnderwater();
     //testMirrorVertical();
-	mirrorHorizontal();   //added
+	mirrorHorizontal();  
 	//mirrorHorizontalBotToTop();
     //mirrorVerticalRightToLeft();
     //testMirrorTemple();
