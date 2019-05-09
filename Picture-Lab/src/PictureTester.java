@@ -17,6 +17,14 @@ public class PictureTester
     beach.explore();
   }
   
+  public static void testKeepOnlyBlue()
+	  {
+	    Picture beach = new Picture("beach.jpg");
+	    beach.explore();
+	    beach.keepOnlyBlue();
+	    beach.explore();
+	  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -55,7 +63,27 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
+  public static void testNegate(){
+	  Picture beach = new Picture("beach.jpg");
+	    beach.explore();
+	    beach.negate();
+	    beach.explore();
+  }
   
+  public static void testGrayscale(){
+	  Picture beach = new Picture("beach.jpg");
+	    beach.explore();
+	    beach.grayscale();
+	    beach.explore();
+  }
+  public static void testFixUnderwater(){
+	  Picture water = new Picture("water.jpg");
+	  water.explore();
+	  water.fixUnderwater();
+	  water.explore();
+  }
+  
+
   public static void testMirrorArms()
   {
 	  Picture snowman = new Picture("snowman.jpg");
@@ -64,6 +92,7 @@ public class PictureTester
 	  snowman.explore();
   }
   
+
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -80,6 +109,7 @@ public class PictureTester
     swan.explore();
   }
   
+
   public static void testKeepOnlyBlue()
   {
 	  Picture beach = new Picture("beach.jpg");
@@ -110,6 +140,7 @@ public class PictureTester
 	  water.explore();
 	  water.fixUnderwater();
 	  water.explore();
+
   }
   
   /** Main method for testing.  Every class can have a main
@@ -119,6 +150,7 @@ public class PictureTester
     // uncomment a call here to run a test
     // and comment out the ones you don't want
     // to run
+
     //testZeroBlue();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
@@ -127,13 +159,16 @@ public class PictureTester
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
-	//testMirrorHorizontal();
+
+	 //testMirrorHorizontal();
+	  //testMirrorHorizontalBotToTop();
+	 //testMirrorVerticalRightToLeft();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
     //testCollage();
-    //testCopy();
+    testCopy();
     //testEdgeDetection();
     //testEdgeDetection2();
     //testChromakey();
@@ -143,4 +178,10 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
   }
+
+private static void testCopy()
+	{
+		// TODO Auto-generated method stub
+		
+	}
 }
