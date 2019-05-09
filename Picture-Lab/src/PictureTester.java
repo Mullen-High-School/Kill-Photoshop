@@ -124,46 +124,4 @@ public class PictureTester
   }
   
  
-  
-  
-  
-  /** Main method for testing.  Every class can have a main
-    * method in Java */
-  public static void main(String[] args)
-  {
-    // uncomment a call here to run a test
-    // and comment out the ones you don't want
-    // to run
-    //testZeroBlue();
-    //keepOnlyBlue();
-	//mirrorDiagonal();
-	//mirrorArms();
-    //negate();
-    //grayscale();
-    //fixUnderwater();
-    //testKeepOnlyBlue();
-    //testKeepOnlyRed();
-    //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
-    //fixUnderwater();
-    //testMirrorVertical();
-	mirrorHorizontal();  
-	//mirrorHorizontalBotToTop();
-    //mirrorVerticalRightToLeft();
-    //testMirrorTemple();
-    //testMirrorArms();
-    //testMirrorGull();
-    //testMirrorDiagonal();
-    //testCollage();
-    //testCopy();
-    //testEdgeDetection();
-    //testEdgeDetection2();
-    //testChromakey();
-    //testEncodeAndDecode();
-    //testGetCountRedOverValue(250);
-    //testSetRedToHalfValueInTopHalf();
-    //testClearBlueOverValue(200);
-    //testGetAverageForColumn(0);
-  }
 }
