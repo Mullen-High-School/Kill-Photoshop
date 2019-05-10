@@ -740,7 +740,7 @@ private class PictureExplorerFocusTraversalPolicy
    */
 	public static void main( String args[])
 		{
-	    Picture pix = new Picture("beach.jpg");
+	    Picture pix = new Picture("thruDoor.jpg");
 	    pix.explore();
 		} 
 	  }
