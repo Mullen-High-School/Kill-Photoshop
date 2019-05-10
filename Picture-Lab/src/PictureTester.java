@@ -11,11 +11,27 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.zeroBlue();
-    beach.explore();
+    Picture swan = new Picture("swan.jpg");
+    swan.explore();
+    swan.zeroBlue();
+    swan.explore();
   }
+  
+  public static void testZeroRed()
+	  {
+	    Picture swan = new Picture("swan.jpg");
+	    swan.explore();
+	    swan.zeroRed();
+	    swan.explore();
+	  }
+  
+  public static void testZeroGreen()
+	  {
+	    Picture swan = new Picture("swan.jpg");
+	    swan.explore();
+	    swan.zeroGreen();
+	    swan.explore();
+	  }
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -55,10 +71,9 @@ public class PictureTester
     * method in Java */
   public static void main(String[] args)
   {
-    // uncomment a call here to run a test
-    // and comment out the ones you don't want
-    // to run
-    testZeroBlue();
+   // testZeroBlue();
+    //testZeroRed();
+    testZeroGreen();
     //testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
