@@ -58,7 +58,7 @@ public class Menu {
 			
 		public static void displayJFrame()
 		{
-			
+			//
 			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 			frame.setSize(300, 150);
 			frame.setLocation(430, 100);
