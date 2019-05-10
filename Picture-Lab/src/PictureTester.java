@@ -26,7 +26,7 @@ public class PictureTester
   
   public static void negate()
   {
-    Picture snowman = new Picture("snowman.jpg");
+    Picture snowman = new Picture("seagull.jpg");
     snowman.explore();
     snowman.negate();
     snowman.explore();
@@ -88,6 +88,14 @@ public class PictureTester
     Picture temple = new Picture("temple.jpg");
     temple.explore();
     temple.mirrorTemple();
+    temple.explore();
+  }
+  
+  public static void mirrorArms()
+  {
+    Picture temple = new Picture("snowman.jpg");
+    temple.explore();
+    temple.mirrorArms();
     temple.explore();
   }
   
