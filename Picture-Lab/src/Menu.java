@@ -29,7 +29,7 @@ public class Menu {
 		case 1:
 		{
 			//dolphin
-			
+			//
 			Scanner userInput2 = new Scanner(System.in);
 			System.out.println("(1) Change/alter the coloring");
 			System.out.println("(2) Rotate the image");
