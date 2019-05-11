@@ -1,6 +1,7 @@
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.Scanner;
 
 import javax.swing.BoxLayout;
 import javax.swing.JButton;
@@ -11,11 +12,62 @@ import javax.swing.JPanel;
 
 public class Menu {
 
-	
-		static JFrame frame = new JFrame("Universal Converter v.1");
 	public static void main(String[] args) {
 	    
-		displayJFrame();
+		Scanner userInput = new Scanner(System.in);
+		System.out.println("Which picture would you like to use?");
+		System.out.println("(1) Dolphin");
+		System.out.println("(2) Mr. McGuire");
+		System.out.println("(3) Something");
+		System.out.println("(4) Something else");
+		System.out.println("(5) Something cool");
+		int userChoice = userInput.nextInt();
+		
+		switch (userChoice)
+		{
+		
+		case 1:
+		{
+			//dolphin
+			
+			Scanner userInput2 = new Scanner(System.in);
+			System.out.println("(1) Change/alter the coloring");
+			System.out.println("(2) Rotate the image");
+			System.out.println("(3) ");
+			int userAlteration = userInput2.nextInt();
+			
+			break;
+		}
+		
+		case 2:
+		{
+			//Mr. McGuire
+			
+			break;
+		}
+		
+		case 3:
+		{
+			//something
+			
+			break;
+		}
+		
+		case 4:
+		{
+			//something else
+			
+			break;
+		}
+		
+		case 5:
+		{
+			//something cool 
+			
+			break;
+		}
+		
+		}
 		
 		//PictureTester.testZeroBlue();
 	    //PictureTester.keepOnlyBlue();
@@ -38,7 +90,7 @@ public class Menu {
 	    //PictureTester.testMirrorArms();
 	    //PictureTester.testMirrorGull();
 	    //PictureTester.testMirrorDiagonal();
-	    //PictureTester.testCollage();
+	    PictureTester.testCollage();
 	    //PictureTester.testCopy();
 	    //PictureTester.testEdgeDetection();
 	    //PictureTester.testEdgeDetection2();
@@ -47,79 +99,9 @@ public class Menu {
 	    //PictureTester.testGetCountRedOverValue(250);
 	    //PictureTester.testSetRedToHalfValueInTopHalf();
 	    //PictureTester.testClearBlueOverValue(200);
-	    //PictureTester.testGetAverageForColumn(0);
-	  
+	    //PictureTester.testGetAverageForColumn(0);	
 		
-		
-		
-		
-		
-	}
-			
-		public static void displayJFrame()
-		{
-			//
-			frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-			frame.setSize(300, 150);
-			frame.setLocation(430, 100);
-			
-			JPanel panel = new JPanel();
-			panel.setLayout(new BoxLayout(panel, BoxLayout.Y_AXIS));
-			frame.add(panel);
-			
-			JLabel lbl = new JLabel("Select the type of conversion");
-			lbl.setAlignmentX(Component.CENTER_ALIGNMENT);
-			
-			panel.add(lbl);
-			
-			String [] choices = {"Temperature", "Metric", "Currency", "Time Zones", "Imperial"};
-			
-			final JComboBox<String> cb = new JComboBox<String>(choices);
-			
-			cb.setMaximumSize(cb.getPreferredSize()); 
-			cb.setAlignmentX(Component.CENTER_ALIGNMENT);
-			
-			panel.add(cb);
-			
-			JButton btn = new JButton("OK");
-			btn.setAlignmentX(Component.CENTER_ALIGNMENT);
-			panel.add(btn);
-			
-			frame.setVisible(true);
-			
-			btn.addActionListener(new ActionListener()
-				{
-					public void actionPerformed(ActionEvent e)
-					{
-//						frame.getContentPane().removeAll();
-//					    frame.repaint();
-//						frame.getContentPane().setLayout(new FlowLayout());
-						switch(cb.getSelectedIndex())
-						{
-							case 0:
-//								TempConversions.convertTemp();
-//								break;
-//							case 1:
-//								MetricConversions.metricConversions();
-//								break;
-//							case 2:
-//								Currency.converterStart();
-//								break;
-//							case 3: 
-//								TimeZones.takeInput();
-//								break;
-//							case 4:
-//								ImperialConversions.imperialConversion();
-//								break;
-							
-						}
-					}
-				}
-			);
-		}
-		
-	
-		
+	}	
 
-	}
+}
 
