@@ -92,13 +92,13 @@ public class Menu {
 //    PictureTester.testCollage();
 //	    PictureTester.testCopy();
 //    this works	    PictureTester.testEdgeDetection();
-//		this does not work	    PictureTester.testEdgeDetection2();
-// 		this does not work	    PictureTester.testChromakey();
-//		this does not work	    PictureTester.testEncodeAndDecode();
-//		this does not work	    PictureTester.testGetCountRedOverValue(250);
-// this does not work	    PictureTester.testSetRedToHalfValueInTopHalf();
-// this does not work	    PictureTester.testClearBlueOverValue(200);
-//	 this does not work    PictureTester.testGetAverageForColumn(0);	
+//		this does not work	    PictureTester.testEdgeDetection2(); 		 - carlos 
+// 		this does not work	    PictureTester.testChromakey(); 		----- carlos 
+//		this does not work	    PictureTester.testEncodeAndDecode(); 		------ carlos
+//		this does not work	    PictureTester.testGetCountRedOverValue(250);			--- carlos 
+// this does not work	    PictureTester.testSetRedToHalfValueInTopHalf(); 			---- coco
+// this does not work	    PictureTester.testClearBlueOverValue(200);			----- coco
+//	 this does not work    PictureTester.testGetAverageForColumn(0);				---coco
 //		
 	}	
 
