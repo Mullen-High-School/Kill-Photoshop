@@ -21,7 +21,7 @@ public class PictureTester
     Picture snowman = new Picture("Bo.jpg");
     snowman.explore();
     snowman.keepOnlyBlue();
-    snowman.explore();-
+    snowman.explore();
   }
   
   public static void negate()
@@ -56,14 +56,14 @@ public class PictureTester
 	  water.explore();
   }
   
-//  public static void mirrorHorizontalBotToTop()
-//  {
-//	  Picture water = new Picture("water.jpg");
-//	  water.explore();
-//	  water.mirrorHorizontalBotToTop();
-//	  water.explore();
-//  }
-//  
+  public static void mirrorHorizontalBotToTop()
+  {
+	  Picture water = new Picture("water.jpg");
+	  water.explore();
+	  water.mirrorHorizontalBotToTop();
+	  water.explore();
+  }
+  
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -99,22 +99,22 @@ public class PictureTester
     temple.explore();
   }
   
-//  public static void mirrorDiagonal()
-//  {
-//	  Picture caterpillar = new Picture("beach.jpg");
-//	    caterpillar.explore();
-//	    caterpillar.mirrorDiagonal();
-//	    caterpillar.explore();
-//  }
+  public static void mirrorDiagonal()
+  {
+	  Picture caterpillar = new Picture("beach.jpg");
+	    caterpillar.explore();
+	    caterpillar.mirrorDiagonal();
+	    caterpillar.explore();
+  }
   
-//  public static void mirrorArms()
-//  {
-//	  Picture caterpillar = new Picture("snowman.jpg");
-//	    caterpillar.explore();
-//	    caterpillar.mirrorArms();
-//	    caterpillar.explore();
-//  }
-//  
+  public static void mirrorArms()
+  {
+	  Picture caterpillar = new Picture("snowman.jpg");
+	    caterpillar.explore();
+	    caterpillar.mirrorArms();
+	    caterpillar.explore();
+  }
+  
   /** Method to test the collage method */
   public static void testCollage()
   {
