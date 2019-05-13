@@ -21,7 +21,7 @@ public class PictureTester
     Picture snowman = new Picture("Bo.jpg");
     snowman.explore();
     snowman.keepOnlyBlue();
-    snowman.explore();
+    snowman.explore();-
   }
   
   public static void negate()
