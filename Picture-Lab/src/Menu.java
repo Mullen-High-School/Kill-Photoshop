@@ -92,7 +92,7 @@ public class Menu {
 //    PictureTester.testCollage();
 //	    PictureTester.testCopy();
 //    this works	    PictureTester.testEdgeDetection();
-//		this does not work	    PictureTester.testEdgeDetection2(); 		 - carlos 
+//		this does not work	    PictureTester.testEdgeDetection2(); 		----- - carlos 
 // 		this does not work	    PictureTester.testChromakey(); 		----- carlos 
 //		this does not work	    PictureTester.testEncodeAndDecode(); 		------ carlos
 //		this does not work	    PictureTester.testGetCountRedOverValue(250);			--- carlos 
