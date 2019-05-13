@@ -82,8 +82,8 @@ public class Menu {
 //	    PictureTester.testMirrorVertical(); -------- eric
 		
 		
-//		 this works i hope PictureTester.mirrorHorizontal();
-//		 this works  i hope PictureTester.mirrorHorizontalBotToTop();
+//		 this works i hope 		PictureTester.mirrorHorizontal();
+//		 this works  i hope 		PictureTester.mirrorHorizontalBotToTop();
 //		this works	    PictureTester.mirrorVerticalRightToLeft();
 //		this works 		PictureTester.testMirrorTemple();
 //    PictureTester.testMirrorArms();
