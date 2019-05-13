@@ -99,6 +99,14 @@ public class PictureTester
     temple.explore();
   }
   
+  public static void changeStache()
+  {
+	  Picture temple = new Picture("bo.jpg");
+	    temple.explore();
+	    temple.mirrorTemple();
+	    temple.explore();
+  }
+  
   public static void mirrorArms()
   {
     Picture temple = new Picture("snowman.jpg");

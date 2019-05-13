@@ -84,7 +84,7 @@ public class Menu {
 	    //PictureTester.fixUnderwater();
 	    //PictureTester.testMirrorVertical();
 		//PictureTester.mirrorHorizontal();   //added
-		PictureTester.mirrorHorizontalBotToTop();
+		//PictureTester.mirrorHorizontalBotToTop();
 	    //PictureTester.mirrorVerticalRightToLeft();
 	    //PictureTester.testMirrorTemple();
 	    //PictureTester.testMirrorArms();
@@ -100,7 +100,7 @@ public class Menu {
 	    //PictureTester.testSetRedToHalfValueInTopHalf();
 	    //PictureTester.testClearBlueOverValue(200);
 	    //PictureTester.testGetAverageForColumn(0);	
-		
+		PictureTester.changeStache();
 	}	
 
 }

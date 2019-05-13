@@ -245,6 +245,34 @@ public class Picture extends SimplePicture
 		    	} 
 	}
 	
+	public void changeStache()
+	{
+		Pixel[][] pixels = this.getPixels2D();
+	    Pixel leftPixel = null;
+	    Pixel rightPixel = null;
+	    int width = pixels[0].length;
+	    for (int row = 0; row < pixels.length; row++)
+	    	{
+	    	for (int col = 0; col < width / 2; col++)
+	    		{
+	    		if(((pixels[row][col].getRed() > 88) && pixels[row][col].getRed() < 120) &&
+	    				(pixels[row][col].getBlue() > 30) && (pixels[row][col].getBlue() < 50) &&
+	    				(pixels[row][col].getGreen() > 50) && (pixels[row][col].getGreen() < 80))
+				{
+	    				rightPixel.setGreen(0);
+	    				leftPixel.setGreen(0);
+	    				rightPixel.setRed(0);
+	    				leftPixel.setRed(0);
+	    				rightPixel.setBlue(0);
+	    				leftPixel.setBlue(0);
+				}
+		        leftPixel = pixels[row][col];
+		        rightPixel = pixels[row][col];
+		        rightPixel.setColor(leftPixel.getColor());
+	    		}
+	    	} 
+	}
+	
 	public void mirrorArms()
 	{
     Pixel[][] pixels = this.getPixels2D();
