@@ -1,3 +1,4 @@
+
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -32,6 +33,14 @@ public class PictureTester
     snowman.explore();
   }
   
+  public static void mirrorDiagonal()
+  {
+	  Picture snowman = new Picture("bo.jpg");
+	    snowman.explore();
+	    snowman.mirrorDiagonal();
+	    snowman.explore();
+  }
+  
   public static void grayscale()
   {
 	  Picture snowman = new Picture("snowman.jpg");
@@ -58,7 +67,7 @@ public class PictureTester
   
   public static void mirrorHorizontalBotToTop()
   {
-	  Picture water = new Picture("water.jpg");
+	  Picture water = new Picture("bo.jpg");
 	  water.explore();
 	  water.mirrorHorizontalBotToTop();
 	  water.explore();
@@ -76,7 +85,7 @@ public class PictureTester
   
   public static void mirrorVerticalRightToLeft()
   {
-    Picture caterpillar = new Picture("beach.jpg");
+    Picture caterpillar = new Picture("bo.jpg");
     caterpillar.explore();
     caterpillar.mirrorVerticalRightToLeft();
     caterpillar.explore();
@@ -91,6 +100,14 @@ public class PictureTester
     temple.explore();
   }
   
+  public static void changeStache()
+  {
+	  Picture temple = new Picture("bo.jpg");
+	    temple.explore();
+	    temple.mirrorTemple();
+	    temple.explore();
+  }
+  
   public static void mirrorArms()
   {
     Picture temple = new Picture("snowman.jpg");
@@ -99,22 +116,14 @@ public class PictureTester
     temple.explore();
   }
   
-  public static void mirrorDiagonal()
-  {
-	  Picture caterpillar = new Picture("beach.jpg");
-	    caterpillar.explore();
-	    caterpillar.mirrorDiagonal();
-	    caterpillar.explore();
-  }
-  
-  public static void mirrorArms()
-  {
-	  Picture caterpillar = new Picture("snowman.jpg");
-	    caterpillar.explore();
-	    caterpillar.mirrorArms();
-	    caterpillar.explore();
-  }
-  
+//  public static void mirrorArms()
+//  {
+//	  Picture caterpillar = new Picture("snowman.jpg");
+//	    caterpillar.explore();
+//	    caterpillar.mirrorArms();
+//	    caterpillar.explore();
+//  }
+//  
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -130,6 +139,5 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
-  
  
 }

@@ -69,6 +69,7 @@ public class Menu {
 		
 		}
 		
+		PictureTester.changeStache();
 //		PictureTester.testZeroBlue();
 	//  this works  PictureTester.keepOnlyBlue();
 	//	PictureTester.mirrorDiagonal();
@@ -100,6 +101,7 @@ public class Menu {
 // this does not work	    PictureTester.testClearBlueOverValue(200);
 //	 this does not work    PictureTester.testGetAverageForColumn(0);	
 //		
+
 	}	
 
 }
