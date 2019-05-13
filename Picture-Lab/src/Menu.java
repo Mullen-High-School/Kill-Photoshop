@@ -18,7 +18,7 @@ public class Menu {
 		System.out.println("Which picture would you like to use?");
 		System.out.println("(1) Dolphin");
 		System.out.println("(2) Mr. McGuire");
-		System.out.println("(3) Something");
+		System.out.println("(3) Something ");
 		System.out.println("(4) Something else");
 		System.out.println("(5) Something cool");
 		int userChoice = userInput.nextInt();
