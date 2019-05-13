@@ -20,7 +20,7 @@ public class Menu {
 		System.out.println("(2) Mr. McGuire");
 		System.out.println("(3) Something ");
 		System.out.println("(4) Something else");
-		System.out.println("(5) Something cool");
+		System.out.println("(5) Something cool ");
 		int userChoice = userInput.nextInt();
 		
 		switch (userChoice)
