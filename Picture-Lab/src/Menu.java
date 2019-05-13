@@ -69,7 +69,7 @@ public class Menu {
 		
 		}
 		
-		//PictureTester.testZeroBlue();
+	//PictureTester.testZeroBlue();
 	    //PictureTester.keepOnlyBlue();
 		//PictureTester.mirrorDiagonal();
 		//PictureTester.mirrorArms();
@@ -84,13 +84,13 @@ public class Menu {
 	    //PictureTester.fixUnderwater();
 	    //PictureTester.testMirrorVertical();
 		//PictureTester.mirrorHorizontal();   //added
-		//PictureTester.mirrorHorizontalBotToTop();
+		PictureTester.mirrorHorizontalBotToTop();
 	    //PictureTester.mirrorVerticalRightToLeft();
 	    //PictureTester.testMirrorTemple();
 	    //PictureTester.testMirrorArms();
 	    //PictureTester.testMirrorGull();
 	    //PictureTester.testMirrorDiagonal();
-	    PictureTester.testCollage();
+	    //PictureTester.testCollage();
 	    //PictureTester.testCopy();
 	    //PictureTester.testEdgeDetection();
 	    //PictureTester.testEdgeDetection2();
