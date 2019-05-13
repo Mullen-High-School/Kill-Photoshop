@@ -1,3 +1,4 @@
+
 /**
  * This class contains class (static) methods
  * that will help you test the Picture class 
@@ -138,6 +139,5 @@ public class PictureTester
     swan.edgeDetection(10);
     swan.explore();
   }
-  
  
 }

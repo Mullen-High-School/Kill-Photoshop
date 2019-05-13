@@ -31,9 +31,9 @@ public class Menu {
 			//dolphin
 			
 			Scanner userInput2 = new Scanner(System.in);
-			System.out.println("(1) Change/alter the coloring");
+			System.out.println("(1) Change coloring");
 			System.out.println("(2) Rotate the image");
-			System.out.println("(3) ");
+			System.out.println("(3) Reflect the image");
 			int userAlteration = userInput2.nextInt();
 			
 			break;
@@ -69,38 +69,39 @@ public class Menu {
 		
 		}
 		
-	//PictureTester.testZeroBlue();
-	    //PictureTester.keepOnlyBlue();
-		//PictureTester.mirrorDiagonal();
-		//PictureTester.mirrorArms();
-	    //PictureTester.negate();
-	    //PictureTester.grayscale();
-	    //PictureTester.fixUnderwater();
-	    //PictureTester.testKeepOnlyBlue();
-	    //PictureTester.testKeepOnlyRed();
-	    //PictureTester.testKeepOnlyGreen();
-	    //PictureTester.testNegate();
-	    //PictureTester.testGrayscale();
-	    //PictureTester.fixUnderwater();
-	    //PictureTester.testMirrorVertical();
-		//PictureTester.mirrorHorizontal();   //added
-		//PictureTester.mirrorHorizontalBotToTop();
-	    //PictureTester.mirrorVerticalRightToLeft();
-	    //PictureTester.testMirrorTemple();
-	    //PictureTester.testMirrorArms();
-	    //PictureTester.testMirrorGull();
-	    //PictureTester.testMirrorDiagonal();
-	    //PictureTester.testCollage();
-	    //PictureTester.testCopy();
-	    //PictureTester.testEdgeDetection();
-	    //PictureTester.testEdgeDetection2();
-	    //PictureTester.testChromakey();
-	    //PictureTester.testEncodeAndDecode();
-	    //PictureTester.testGetCountRedOverValue(250);
-	    //PictureTester.testSetRedToHalfValueInTopHalf();
-	    //PictureTester.testClearBlueOverValue(200);
-	    //PictureTester.testGetAverageForColumn(0);	
 		PictureTester.changeStache();
+//		PictureTester.testZeroBlue();
+	//  this works  PictureTester.keepOnlyBlue();
+	//	PictureTester.mirrorDiagonal();
+	//	this works	PictureTester.mirrorArms();
+	//	this works 	PictureTester.negate();
+	//	this works	PictureTester.grayscale();
+	 // this works  	PictureTester.fixUnderwater();
+
+//	    PictureTester.testKeepOnlyRed(); ----- eric
+//	    PictureTester.testKeepOnlyGreen(); ------ eric 
+//	    PictureTester.testMirrorVertical(); -------- eric
+		
+		
+//		 this works i hope 		PictureTester.mirrorHorizontal();
+//		 this works  i hope 		PictureTester.mirrorHorizontalBotToTop();
+//		this works	    PictureTester.mirrorVerticalRightToLeft();
+//		this works 		PictureTester.testMirrorTemple();
+//    PictureTester.testMirrorArms();
+//	    PictureTester.testMirrorGull();
+//	    PictureTester.testMirrorDiagonal();
+//    PictureTester.testCollage();
+//	    PictureTester.testCopy();
+//    this works	    PictureTester.testEdgeDetection();
+//		this does not work	    PictureTester.testEdgeDetection2();
+// 		this does not work	    PictureTester.testChromakey();
+//		this does not work	    PictureTester.testEncodeAndDecode();
+//		this does not work	    PictureTester.testGetCountRedOverValue(250);
+// this does not work	    PictureTester.testSetRedToHalfValueInTopHalf();
+// this does not work	    PictureTester.testClearBlueOverValue(200);
+//	 this does not work    PictureTester.testGetAverageForColumn(0);	
+//		
+
 	}	
 
 }
