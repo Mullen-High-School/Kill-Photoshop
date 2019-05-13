@@ -110,38 +110,7 @@ public class PictureTester
   }
   
 
-  public static void testKeepOnlyBlue()
-  {
-	  Picture beach = new Picture("beach.jpg");
-	  beach.explore();
-	  beach.keepOnlyBlue();
-	  beach.explore();
-  }
-  
-  public static void testNegate()
-  {
-	  Picture swan = new Picture("swan.jpg");
-	  swan.explore();
-	  swan.negate();
-	  swan.explore();
-  }
-  
-  public static void testGrayscale()
-  {
-	  Picture blueMotorcycle = new Picture("blueMotorcycle.jpg");
-	  blueMotorcycle.explore();
-	  blueMotorcycle.grayscale();
-	  blueMotorcycle.explore();
-  }
-  
-  public static void testFixUnderwater()
-  {
-	  Picture water = new Picture("water.jpg");
-	  water.explore();
-	  water.fixUnderwater();
-	  water.explore();
 
-  }
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
