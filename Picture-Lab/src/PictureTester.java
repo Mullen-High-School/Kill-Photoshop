@@ -92,22 +92,40 @@ public class PictureTester
     temple.explore();
   }
   
+  public static void keepOnlyGreen()
+  {
+    Picture snowman = new Picture("BoStache.jpg");
+    snowman.explore();
+    snowman.keepOnlyGreen();
+    snowman.explore();
+  }
+  
+  public static void keepOnlyRed()
+  {
+    Picture snowman = new Picture("BoStache.jpg");
+    snowman.explore();
+    snowman.keepOnlyRed();
+    snowman.explore();
+  }
+  
+  
+  
   public static void changeStache()
   {
-	  Picture temple = new Picture("Bo.jpg");
+	  Picture temple = new Picture("BoStache.jpg");
 	    temple.explore();
 	    temple.changeStache();
 	    temple.explore();
   }
   
-  public static void mirrorArms()
-  {
-    Picture temple = new Picture("Bo.jpg");
-    temple.explore();
-    temple.mirrorArms();
-    temple.explore();
-  }
-  
+//  public static void mirrorArms()
+//  {
+//    Picture temple = new Picture("Bo.jpg");
+//    temple.explore();
+//    temple.mirrorArms();
+//    temple.explore();
+//  }
+//  
   public static void mirrorDiagonal()
   {
 	  Picture caterpillar = new Picture("Bo.jpg");

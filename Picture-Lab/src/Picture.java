@@ -100,7 +100,35 @@ public class Picture extends SimplePicture
     		}
     	}
 	}
-	
+//	
+//	public void keepOnlyGreen()
+//	{
+//    Pixel[][] pixels = this.getPixels2D();
+//    for (Pixel[] rowArray : pixels)
+//    	{
+//    	for (Pixel pixelObj : rowArray)
+//    		{
+//    		
+//    		pixelObj.setBlue(0);
+//    		pixelObj.setRed(0);
+//    		}
+//    	}
+//	}
+//	
+//	public void keepOnlyRed()
+//	{
+//    Pixel[][] pixels = this.getPixels2D();
+//    for (Pixel[] rowArray : pixels)
+//    	{
+//    	for (Pixel pixelObj : rowArray)
+//    		{
+//    		
+//    		pixelObj.setGreen(0);
+//    		pixelObj.setBlue(0);
+//    		}
+//    	}
+//	}
+//	
 	public void negate()
 	{
     Pixel[][] pixels = this.getPixels2D();
@@ -252,11 +280,6 @@ public class Picture extends SimplePicture
 	    Pixel rightPixel = null;
 	    int width = pixels[0].length;
 	    
-	    Scanner Bo = new Scanner(System.in);
-	    int blue = Bo.nextInt();
-	    int red = Bo.nextInt();
-	    int green = Bo.nextInt();
-	    
 	    
 	    for (Pixel[] rowArray : pixels)
     	{
@@ -265,10 +288,13 @@ public class Picture extends SimplePicture
 	    		if(((pixelObj.getRed() >= 105 && pixelObj.getRed()<= 110) &&
 	    				(pixelObj.getBlue() >= 40) && (pixelObj.getBlue() <= 45) &&
 	    				(pixelObj.getGreen() >= 60) && (pixelObj.getGreen() <= 65)))
-				{
-	    				pixelObj.setBlue(blue);
-	    				pixelObj.setGreen(green);
-	    				pixelObj.setRed(red);
+				{		
+	    		
+	    				pixelObj.setBlue(Menu.blue);
+	    			
+	    				pixelObj.setGreen(Menu.green);
+
+	    				pixelObj.setRed(Menu.red);
 	    				
 	    				
 	    				

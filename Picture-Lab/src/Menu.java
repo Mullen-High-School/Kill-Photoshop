@@ -13,9 +13,14 @@ import javax.swing.JPanel;
 
 public class Menu {
 
+	static int blue = 0;
+	 static  int red = 0;
+	 static  int green = 0;
+	
 	public static void main(String[] args) {
 
 		System.out.println("Here is a photo of Bo. What would you like to do with it?");
+		
 			Scanner userInput2 = new Scanner(System.in);
 			System.out.println("(1) Change coloring");
 			System.out.println("(2) Rotate/Reflect the image");
@@ -28,45 +33,81 @@ public class Menu {
 					Scanner userInput3 = new Scanner(System.in);
 					System.out.println("(1) keep only blue");
 					System.out.println("(2) remove blue");
-					System.out.println("(3) negate");
-					System.out.println("(4) grayscale");
-					int choice = userInput3.nextInt();
+					System.out.println("(3) keep only red");
+					System.out.println("(4) keep only green");
+					System.out.println("(5) negate");
+					System.out.println("(6) grayscale");
+					System.out.println("(7) change stache");
+					int choice1 = userInput3.nextInt();
 					
-					switch (choice)
+					switch (choice1)
 					{
 					case 1:
 					{
 						PictureTester.keepOnlyBlue();
+						break;
+						
 					}
 					
 					case 2:
 					{
 						PictureTester.testZeroBlue();
+						break;
 					}
-					
-					case 3:
+		
+//					case 3:
+//					{
+//						PictureTester.keepOnlyRed();
+//						break;
+//					}
+//
+//					case 4:
+//					{
+//						PictureTester.keepOnlyGreen();
+//						break;
+//					}
+			case 5:
 					{
 						PictureTester.negate();
+						break;
 					}
 					
-					case 4:
+					case 6:
 					{
 						PictureTester.grayscale();
+						break;
 					}
-					
+					case 7:
+					{
+						
+					    Scanner Blue1 = new Scanner(System.in);
+						System.out.println("Enter blue value");
+						 blue = Blue1.nextInt();
+						 
+						 Scanner red1 = new Scanner(System.in);
+						System.out.println("Enter red value");
+						 red = red1.nextInt();
+						    
+						    Scanner green1 = new Scanner(System.in);
+						System.out.println("Enter green value");
+						 green = green1.nextInt();
+						  
+						  
+						PictureTester.changeStache();
 					}
+				}
 	
 					
 				}
 				case 2:
 				{
-					Scanner userInput3 = new Scanner(System.in);
+					Scanner userInput4 = new Scanner(System.in);
 					System.out.println("(1) mirror horizontal");
 					System.out.println("(2) mirror horizontal bottom to top");
 					System.out.println("(3) mirror vertical ");
 					System.out.println("(4) mirror vertical right to left");
-					System.out.println("(5) mirror diagonal");
-					int choice = userInput3.nextInt();
+				//	System.out.println("(5) mirror diagonal");
+					int choice = userInput4.nextInt();
 				
 				
 						switch (choice)
@@ -74,28 +115,33 @@ public class Menu {
 						case 1:
 						{
 							PictureTester.mirrorHorizontal();
+							break;
 						}
 						
 						case 2:
 						{
-							PictureTester.mirrorHorizontalBotToTop();
+							//PictureTester.mirrorHorizontalBotToTop();
+							break;
 						}
 						
 						case 3:
 						{
 							 PictureTester.testMirrorVertical();
+							 break;
 						}
 						
 						case 4:
 						{
 							 PictureTester.mirrorVerticalRightToLeft();
+							 break;
 						}
 						
-						case 5:
-						{
-						//	PictureTester.testMirrorDiagonal();
-						}
-					
+//						case 5:
+//						{
+//						//	PictureTester.testMirrorDiagonal();
+//							break;
+//						}
+//					
 					}
 			
 				}
