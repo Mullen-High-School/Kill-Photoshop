@@ -102,9 +102,9 @@ public class PictureTester
   
   public static void changeStache()
   {
-	  Picture temple = new Picture("bo.jpg");
+	  Picture temple = new Picture("BoStache.jpg");
 	    temple.explore();
-	    temple.mirrorTemple();
+	    temple.changeStache();
 	    temple.explore();
   }
   
