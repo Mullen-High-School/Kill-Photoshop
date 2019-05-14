@@ -87,6 +87,7 @@ public class Picture extends SimplePicture
 	    		}
 	    	}
 		}
+
 	
 	public void zeroRed()
 		{
@@ -255,6 +256,7 @@ public class Picture extends SimplePicture
 		}
 	
 
+
 	
 	public void fixUnderwater(){
 		 
@@ -320,6 +322,7 @@ public class Picture extends SimplePicture
 	
 	
 
+
   /** Method to create a collage of several pictures */
 	public void createCollage()
 		{
@@ -363,12 +366,34 @@ public class Picture extends SimplePicture
 	
 
 	
-	
-	
-	
-	
-	
 
+	public void grayscale()
+	{
+		Pixel[][] pixels = this.getPixels2D();
+	    for (Pixel[] rowArray : pixels)
+	    	{
+	    	for (Pixel pixelObj : rowArray)
+	    		{
+	    			int average = (pixelObj.getRed() + pixelObj.getBlue() + pixelObj.getGreen()) / 3;
+		    		pixelObj.setRed(average);
+		    		pixelObj.setGreen(average);
+		    		pixelObj.setBlue(average);
+	    		}
+	    	}
+	}
+	
+	public void fixUnderwater()
+	{
+		Pixel[][] pixels = this.getPixels2D();
+	    for (Pixel[] rowArray : pixels)
+	    	{
+	    	for (Pixel pixelObj : rowArray)
+	    		{
+	    			pixelObj.setRed(pixelObj.getRed()*4);
+	    		}
+	    	}
+	}
+	
 	//Works
 	public void mirrorVerticalRightToLeft()
 	{
