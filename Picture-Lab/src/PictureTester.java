@@ -127,4 +127,3 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
   }
-}
