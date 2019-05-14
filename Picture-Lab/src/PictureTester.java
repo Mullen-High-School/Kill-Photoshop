@@ -57,13 +57,13 @@ public class PictureTester
 	  water.explore();
   }
   
-  public static void mirrorHorizontalBotToTop()
-  {
-	  Picture water = new Picture("Bo.jpg");
-	  water.explore();
-	//  water.mirrorHorizontalBotToTop();
-	  water.explore();
-  }
+//   public static void mirrorHorizontalBotToTop()
+//   {
+// 	  Picture water = new Picture("Bo.jpg");
+// 	  water.explore();
+// 	//  water.mirrorHorizontalBotToTop();
+// 	  water.explore();
+//   }
   
   
   /** Method to test mirrorVertical */
@@ -90,6 +90,14 @@ public class PictureTester
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
+  }
+  
+  public static void changeStache()
+  {
+	  Picture temple = new Picture("Bo.jpg");
+	    temple.explore();
+	    temple.changeStache();
+	    temple.explore();
   }
   
   public static void mirrorArms()
