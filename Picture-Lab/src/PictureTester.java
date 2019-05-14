@@ -39,6 +39,7 @@ public class PictureTester
 	    swan.explore();
 	    swan.keepOnlyBlue();
 	    swan.explore();
+	    
 	  }
   
   public static void testKeepOnlyRed()
