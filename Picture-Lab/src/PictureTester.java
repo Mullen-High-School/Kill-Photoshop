@@ -58,6 +58,14 @@ public class PictureTester
 	    swan.explore();
 	  }
   
+  public static void testNegate()
+  {
+	  Picture swan = new Picture("swan.jpg");
+	  swan.explore();
+	  swan.negate();
+	  swan.explore();
+  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -106,7 +114,8 @@ public class PictureTester
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     
-	  //testNegate();
+	  //Negate : Taylor
+	testNegate();
 	  
 	  
     //testGrayscale();
@@ -127,3 +136,4 @@ public class PictureTester
     //testClearBlueOverValue(200);
     //testGetAverageForColumn(0);
   }
+}
