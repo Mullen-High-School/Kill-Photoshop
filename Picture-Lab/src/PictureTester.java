@@ -33,6 +33,30 @@ public class PictureTester
 	    swan.explore();
 	  }
   
+  public static void testKeepOnlyBlue()
+	  {
+	    Picture swan = new Picture("swan.jpg");
+	    swan.explore();
+	    swan.keepOnlyBlue();
+	    swan.explore();
+	  }
+  
+  public static void testKeepOnlyRed()
+	  {
+	    Picture swan = new Picture("swan.jpg");
+	    swan.explore();
+	    swan.keepOnlyRed();
+	    swan.explore();
+	  }
+  
+  public static void testKeepOnlyGreen()
+	  {
+	    Picture swan = new Picture("swan.jpg");
+	    swan.explore();
+	    swan.keepOnlyGreen();
+	    swan.explore();
+	  }
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
@@ -76,10 +100,13 @@ public class PictureTester
     //testZeroRed();
     //testZeroGreen();
     
+	  //KeepOnly Blue, Red, Green : Taylor
 	//testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
+    
+	  //testNegate();
+	  
     //testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
