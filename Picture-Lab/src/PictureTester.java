@@ -66,6 +66,14 @@ public class PictureTester
 	  swan.explore();
   }
   
+  public static void testGrayscale()
+	  {
+		  Picture swan = new Picture("swan.jpg");
+		  swan.explore();
+		  swan.grayscale();
+		  swan.explore();
+	  }
+  
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
@@ -116,10 +124,10 @@ public class PictureTester
     //testKeepOnlyGreen();
     
 	  //Negate : Taylor
-	testNegate();
+	//testNegate();
 	  
 	  
-    //testGrayscale();
+    testGrayscale();
     //testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
