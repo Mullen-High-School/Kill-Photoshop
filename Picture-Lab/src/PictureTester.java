@@ -26,13 +26,49 @@ public class PictureTester
 	  }
   
   /** Method to test mirrorVertical */
-  public static void testMirrorVertical()
+  public  void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
-    caterpillar.explore();
-    caterpillar.mirrorVerticalRightToLeft();
-    caterpillar.explore();
+//    Picture caterpillar = new Picture("caterpillar.jpg");
+//    caterpillar.explore();
+//    caterpillar.mirrorVerticalRightToLeft();
+//    caterpillar.explore();
+	  
+	  Pixel[][] pixels = this.getPixels2D();
+	  Pixel leftPixel = null;
+	  Pixel rightPixel = null;
+		 
+	  int width = pixels[0].length;
+		 
+		 for (int row = 0; row < pixels.length; row++)
+			 {
+				 for (int col = 0; col < width / 2; col++)
+					 {
+						 leftPixel = pixels[row][col];
+						 rightPixel = pixels[row][width - 1 - col];
+						 rightPixel.setColor(leftPixel.getColor());
+					 }
+			 }
   }
+  
+  /** Method to test mirrorVerticalRightToLeft */
+  public static void testMirrorVerticalRightToLeft()
+  {
+	 Pixel[][] pixels = this.getPixels2D();
+	 Pixel leftPixel = null;
+	 Pixel rightPixel = null;
+	 
+	 int width = pixels[0].length;
+	 
+	 for (int row = 0; row < pixels.length; row++)
+		 {
+			 for (int col = 0; col < width / 2; col++)
+				 {
+					 leftPixel = pixels[row][col];
+					 rightPixel = pixels[row][width - 1 - col];
+					 rightPixel.setColor(leftPixel.getColor());
+				 }
+		 }
+	}
   
   /** Method to test mirrorHorizontal */
   public static void testMirrorHorizontal()
@@ -110,7 +146,6 @@ public class PictureTester
   }
   
 
-
   
   /** Main method for testing.  Every class can have a main
     * method in Java */
@@ -127,15 +162,16 @@ public class PictureTester
     //testNegate();
     //testGrayscale();
     //testFixUnderwater();
+	  
     //testMirrorVertical();
-
-	 //testMirrorHorizontal();
-	  //testMirrorHorizontalBotToTop();
-	 //testMirrorVerticalRightToLeft();
+	//testMirrorHorizontal();
+	//testMirrorHorizontalBotToTop();
+	//testMirrorVerticalRightToLeft();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
+	  
     //testCollage();
     testCopy();
     //testEdgeDetection();
@@ -148,9 +184,9 @@ public class PictureTester
     //testGetAverageForColumn(0);
   }
 
-private static void testCopy()
+public static void testCopy()
 	{
-		// TODO Auto-generated method stub
+		System.out.println("Hello!");
 		
 	}
 }

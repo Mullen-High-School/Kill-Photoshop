@@ -90,6 +90,7 @@ public class Picture extends SimplePicture
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
+	// Works
 	public void mirrorVertical()
 		{
 	    Pixel[][] pixels = this.getPixels2D();
@@ -158,107 +159,6 @@ public class Picture extends SimplePicture
 	    	}   
 		}
 	
-	public void keepOnlyBlue(){
-		Pixel[][] pixels = this.getPixels2D();
-		 for (Pixel[] rowArray : pixels)
-		 {
-		 for (Pixel pixelObj : rowArray)
-		 {
-		 pixelObj.setGreen(0);
-		 pixelObj.setRed(0);
-		 }
-		 }
-	}
-	
-	public void negate(){
-		Pixel[][] pixels = this.getPixels2D();
-		 for (Pixel[] rowArray : pixels)
-		 {
-		 for (Pixel pixelObj : rowArray)
-		 {
-		 pixelObj.setGreen(255 - pixelObj.getGreen());
-		 pixelObj.setRed(255 - pixelObj.getRed());
-		 pixelObj.setBlue(255 - pixelObj.getBlue());
-		 }
-		 }
-	}
-	
-	public void fixUnderwater(){
-		 
-		  Pixel[][] pixels = this.getPixels2D();
-			 for (Pixel[] rowArray : pixels)
-			 {
-			 for (Pixel pixelObj : rowArray){
-		 pixelObj.setRed(pixelObj.getRed() + 200);
-			 }
-			 }
-			 }
-	public void mirrorVerticalRightToLeft(){
-		Pixel[][] pixels = this.getPixels2D();
-		 Pixel leftPixel = null;
-		 Pixel rightPixel = null;
-		 int width = pixels[0].length;
-		 for (int row = 0; row < pixels.length; row++)
-		 {
-		 for (int col = 0; col < width / 2; col++)
-		 {
-			 rightPixel = pixels[row][col];
-		  leftPixel = pixels[row][width - 1 - col];
-		 rightPixel.setColor(leftPixel.getColor());
-		 }
-		 } 
-	}
-	
-	public void mirrorHorizontal(){
-		Pixel[][] pixels = this.getPixels2D();
-		 Pixel topPixel = null;
-		 Pixel bottomPixel = null;
-		 int width = pixels.length;
-		 for (int row = 0; row < width/2; row++)
-		 {
-		 for (int col = 0; col < pixels[0].length; col++)
-		 {
-			 topPixel = pixels[row][col];
-		  bottomPixel = pixels[width - 1 - row][col];
-		 bottomPixel.setColor(topPixel.getColor());
-		 }
-		 }
-	}
-	
-	public void mirrorHorizontalBotToTop(){
-		Pixel[][] pixels = this.getPixels2D();
-		 Pixel topPixel = null;
-		 Pixel bottomPixel = null;
-		 int width = pixels.length;
-		 for (int row = 0; row < width/2; row++)
-		 {
-		 for (int col = 0; col < pixels[0].length; col++)
-		 {
-			 topPixel = pixels[row][col];
-		  bottomPixel = pixels[width - 1 - row][col];
-		 topPixel.setColor(bottomPixel.getColor());
-		 }
-		 }
-	}
-	
-	public void grayscale(){
-		Pixel[][] pixels = this.getPixels2D();
-		 for (Pixel[] rowArray : pixels)
-		 {
-		 for (Pixel pixelObj : rowArray)
-		 {
-		int average = (pixelObj.getBlue() + pixelObj.getGreen() + pixelObj.getRed()) / 3;
-		pixelObj.setBlue(average);
-		pixelObj.setGreen(average);
-		pixelObj.setRed(average);
-		 
-		 }
-		 }
-	}
-
-	
-	
-	
   /** Method to create a collage of several pictures */
 	public void createCollage()
 		{
@@ -301,6 +201,88 @@ public class Picture extends SimplePicture
 		}
 	
 	
+
+	public void grayscale()
+	{
+		Pixel[][] pixels = this.getPixels2D();
+	    for (Pixel[] rowArray : pixels)
+	    	{
+	    	for (Pixel pixelObj : rowArray)
+	    		{
+	    			int average = (pixelObj.getRed() + pixelObj.getBlue() + pixelObj.getGreen()) / 3;
+		    		pixelObj.setRed(average);
+		    		pixelObj.setGreen(average);
+		    		pixelObj.setBlue(average);
+	    		}
+	    	}
+	}
+	
+	public void fixUnderwater()
+	{
+		Pixel[][] pixels = this.getPixels2D();
+	    for (Pixel[] rowArray : pixels)
+	    	{
+	    	for (Pixel pixelObj : rowArray)
+	    		{
+	    			pixelObj.setRed(pixelObj.getRed()*4);
+	    		}
+	    	}
+	}
+	
+	//Works
+	public void mirrorVerticalRightToLeft()
+	{
+		 Pixel[][] pixels = this.getPixels2D();
+		    Pixel leftPixel = null;
+		    Pixel rightPixel = null;
+		    int width = pixels[0].length;
+		    for (int row = 0; row < pixels.length; row++)
+		    	{
+		    	for (int col = width/2; col >= 0; col--)
+		    		{
+			        leftPixel = pixels[row][col];
+			        rightPixel = pixels[row][width - 1 - col];
+			        leftPixel.setColor(rightPixel.getColor());
+		    		}
+		    	} 
+	}
+	
+	// Works
+	public void mirrorHorizontal()
+	{
+		Pixel[][] pixels = this.getPixels2D();
+	    Pixel topPixel = null;
+	    Pixel bottomPixel = null;
+	    int width = pixels.length;
+	    for (int row = 0; row < width/2; row++)
+	    	{
+	    	for (int col = 0; col < pixels[0].length; col++)
+	    		{
+		        topPixel = pixels[row][col];
+		        bottomPixel = pixels[width - 1 - row][col];
+		        bottomPixel.setColor(topPixel.getColor());
+	    		}
+	    	} 
+	}
+	
+	//Works
+	public void mirrorHorizontalBotToTop()
+	{
+		Pixel[][] pixels = this.getPixels2D();
+	    Pixel topPixel = null;
+	    Pixel bottomPixel = null;
+	    int width = pixels.length;
+	    for (int row = 0; row < width/2; row++)
+	    	{
+	    	for (int col = 0; col < pixels[0].length; col++)
+	    		{
+		        topPixel = pixels[row][col];
+		        bottomPixel = pixels[width - 1 - row][col];
+		        topPixel.setColor(bottomPixel.getColor());
+	    		}
+	    	} 
+	}
+
 	
 	public void mirrorDiagonal()
 	{
@@ -310,11 +292,14 @@ public class Picture extends SimplePicture
 	    int width = pixels.length;
 	    for (int row = 0; row < width; row++)
 	    	{
-	    	for (int col = 0; col != row && col < width; col++)
+	    	for (int col = 0; col < width; col++)
 	    		{
-		        botLeft = pixels[row][col];
-		        topRight = pixels[col][row];
-		        topRight.setColor(botLeft.getColor());
+	    			if(col < pixels.length)
+	    				{
+	    					botLeft = pixels[row][col];
+	    			        topRight = pixels[col][row];
+	    			        topRight.setColor(botLeft.getColor());
+	    				}
 	    		}
 	    	}
 	}
@@ -345,9 +330,9 @@ public class Picture extends SimplePicture
    */
 	public static void main(String[] args) 
 		{
-	    Picture beach = new Picture("beach.jpg");
-	    beach.explore();
-	    beach.zeroBlue();
-	    beach.explore();
+	    Picture swan = new Picture("whiteFlower.jpg");
+	    swan.explore();
+	    swan.mirrorDiagonal();
+	    swan.explore();
 		}
 	} // this } is the end of class Picture, put all new methods before this
