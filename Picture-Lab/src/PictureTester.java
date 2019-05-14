@@ -66,6 +66,7 @@ public class PictureTester
 	  swan.explore();
   }
   
+  
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
