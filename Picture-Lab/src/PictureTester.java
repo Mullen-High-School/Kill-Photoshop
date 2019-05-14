@@ -71,10 +71,12 @@ public class PictureTester
     * method in Java */
   public static void main(String[] args)
   {
-   // testZeroBlue();
+	  //Zero Blue, Red, Green : Taylor 
+	//testZeroBlue();
     //testZeroRed();
-    testZeroGreen();
-    //testKeepOnlyBlue();
+    //testZeroGreen();
+    
+	//testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
     //testNegate();
