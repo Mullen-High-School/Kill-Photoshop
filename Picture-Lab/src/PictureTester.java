@@ -12,7 +12,7 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture snowman = new Picture("snowman.jpg");
+    Picture snowman = new Picture("Bo.jpg");
     snowman.explore();
     snowman.zeroBlue();
     snowman.explore();
@@ -27,23 +27,15 @@ public class PictureTester
   
   public static void negate()
   {
-    Picture snowman = new Picture("seagull.jpg");
+    Picture snowman = new Picture("Bo.jpg");
     snowman.explore();
     snowman.negate();
     snowman.explore();
   }
   
-  public static void mirrorDiagonal()
-  {
-	  Picture snowman = new Picture("bo.jpg");
-	    snowman.explore();
-	    snowman.mirrorDiagonal();
-	    snowman.explore();
-  }
-  
   public static void grayscale()
   {
-	  Picture snowman = new Picture("snowman.jpg");
+	  Picture snowman = new Picture("Bo.jpg");
 	  snowman.explore();
 	  snowman.grayscale();
 	  snowman.explore();
@@ -51,7 +43,7 @@ public class PictureTester
   
   public static void fixUnderwater()
   {
-	  Picture water = new Picture("water.jpg");
+	  Picture water = new Picture("Bo.jpg");
 	  water.explore();
 	  water.fixUnderwater();
 	  water.explore();
@@ -65,19 +57,19 @@ public class PictureTester
 	  water.explore();
   }
   
-  public static void mirrorHorizontalBotToTop()
-  {
-	  Picture water = new Picture("bo.jpg");
-	  water.explore();
-	  water.mirrorHorizontalBotToTop();
-	  water.explore();
-  }
+//   public static void mirrorHorizontalBotToTop()
+//   {
+// 	  Picture water = new Picture("Bo.jpg");
+// 	  water.explore();
+// 	//  water.mirrorHorizontalBotToTop();
+// 	  water.explore();
+//   }
   
   
   /** Method to test mirrorVertical */
   public static void testMirrorVertical()
   {
-    Picture caterpillar = new Picture("caterpillar.jpg");
+    Picture caterpillar = new Picture("Bo.jpg");
     caterpillar.explore();
     caterpillar.mirrorVertical();
     caterpillar.explore();
@@ -85,7 +77,7 @@ public class PictureTester
   
   public static void mirrorVerticalRightToLeft()
   {
-    Picture caterpillar = new Picture("bo.jpg");
+    Picture caterpillar = new Picture("Bo.jpg");
     caterpillar.explore();
     caterpillar.mirrorVerticalRightToLeft();
     caterpillar.explore();
@@ -94,7 +86,7 @@ public class PictureTester
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
-    Picture temple = new Picture("temple.jpg");
+    Picture temple = new Picture("Bo.jpg");
     temple.explore();
     temple.mirrorTemple();
     temple.explore();
@@ -102,7 +94,7 @@ public class PictureTester
   
   public static void changeStache()
   {
-	  Picture temple = new Picture("BoStache.jpg");
+	  Picture temple = new Picture("Bo.jpg");
 	    temple.explore();
 	    temple.changeStache();
 	    temple.explore();
@@ -110,24 +102,32 @@ public class PictureTester
   
   public static void mirrorArms()
   {
-    Picture temple = new Picture("snowman.jpg");
+    Picture temple = new Picture("Bo.jpg");
     temple.explore();
     temple.mirrorArms();
     temple.explore();
   }
   
-//  public static void mirrorArms()
-//  {
-//	  Picture caterpillar = new Picture("snowman.jpg");
-//	    caterpillar.explore();
-//	    caterpillar.mirrorArms();
-//	    caterpillar.explore();
-//  }
-//  
+  public static void mirrorDiagonal()
+  {
+	  Picture caterpillar = new Picture("Bo.jpg");
+	    caterpillar.explore();
+	    caterpillar.mirrorDiagonal();
+	    caterpillar.explore();
+  }
+  
+  public static void mirrorArms()
+  {
+	  Picture caterpillar = new Picture("Bo.jpg");
+	    caterpillar.explore();
+	    caterpillar.mirrorArms();
+	    caterpillar.explore();
+  }
+  
   /** Method to test the collage method */
   public static void testCollage()
   {
-    Picture canvas = new Picture("640x480.jpg");
+    Picture canvas = new Picture("Bo.jpg");
     canvas.createCollage();
     canvas.explore();
   }
@@ -135,9 +135,10 @@ public class PictureTester
   /** Method to test edgeDetection */
   public static void testEdgeDetection()
   {
-    Picture swan = new Picture("swan.jpg");
+    Picture swan = new Picture("Bo.jpg");
     swan.edgeDetection(10);
     swan.explore();
   }
+  
  
 }

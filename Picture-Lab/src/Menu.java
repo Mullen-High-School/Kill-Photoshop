@@ -1,3 +1,4 @@
+
 import java.awt.Component;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -13,63 +14,95 @@ import javax.swing.JPanel;
 public class Menu {
 
 	public static void main(String[] args) {
-	    
-		Scanner userInput = new Scanner(System.in);
-		System.out.println("Which picture would you like to use?");
-		System.out.println("(1) Dolphin");
-		System.out.println("(2) Mr. McGuire");
-		System.out.println("(3) Something");
-		System.out.println("(4) Something else");
-		System.out.println("(5) Something cool");
-		int userChoice = userInput.nextInt();
-		
-		switch (userChoice)
-		{
-		
-		case 1:
-		{
-			//dolphin
-			
+
+		System.out.println("Here is a photo of Bo. What would you like to do with it?");
 			Scanner userInput2 = new Scanner(System.in);
 			System.out.println("(1) Change coloring");
-			System.out.println("(2) Rotate the image");
-			System.out.println("(3) Reflect the image");
+			System.out.println("(2) Rotate/Reflect the image");
 			int userAlteration = userInput2.nextInt();
 			
-			break;
-		}
-		
-		case 2:
-		{
-			//Mr. McGuire
+			switch (userAlteration)
+			{
+				case 1: 
+				{
+					Scanner userInput3 = new Scanner(System.in);
+					System.out.println("(1) keep only blue");
+					System.out.println("(2) remove blue");
+					System.out.println("(3) negate");
+					System.out.println("(4) grayscale");
+					int choice = userInput3.nextInt();
+					
+					switch (choice)
+					{
+					case 1:
+					{
+						PictureTester.keepOnlyBlue();
+					}
+					
+					case 2:
+					{
+						PictureTester.testZeroBlue();
+					}
+					
+					case 3:
+					{
+						PictureTester.negate();
+					}
+					
+					case 4:
+					{
+						PictureTester.grayscale();
+					}
+					
+					}
+	
+					
+				}
+				case 2:
+				{
+					Scanner userInput3 = new Scanner(System.in);
+					System.out.println("(1) mirror horizontal");
+					System.out.println("(2) mirror horizontal bottom to top");
+					System.out.println("(3) mirror vertical ");
+					System.out.println("(4) mirror vertical right to left");
+					System.out.println("(5) mirror diagonal");
+					int choice = userInput3.nextInt();
+				
+				
+						switch (choice)
+						{
+						case 1:
+						{
+							PictureTester.mirrorHorizontal();
+						}
+						
+						case 2:
+						{
+							PictureTester.mirrorHorizontalBotToTop();
+						}
+						
+						case 3:
+						{
+							 PictureTester.testMirrorVertical();
+						}
+						
+						case 4:
+						{
+							 PictureTester.mirrorVerticalRightToLeft();
+						}
+						
+						case 5:
+						{
+						//	PictureTester.testMirrorDiagonal();
+						}
+					
+					}
 			
-			break;
-		}
-		
-		case 3:
-		{
-			//something
+				}
 			
-			break;
-		}
-		
-		case 4:
-		{
-			//something else
-			
-			break;
-		}
-		
-		case 5:
-		{
-			//something cool 
-			
-			break;
-		}
 		
 		}
 		
-		PictureTester.changeStache();
 //		PictureTester.testZeroBlue();
 	//  this works  PictureTester.keepOnlyBlue();
 	//	PictureTester.mirrorDiagonal();
@@ -93,16 +126,14 @@ public class Menu {
 //    PictureTester.testCollage();
 //	    PictureTester.testCopy();
 //    this works	    PictureTester.testEdgeDetection();
-//		this does not work	    PictureTester.testEdgeDetection2();
-// 		this does not work	    PictureTester.testChromakey();
-//		this does not work	    PictureTester.testEncodeAndDecode();
-//		this does not work	    PictureTester.testGetCountRedOverValue(250);
-// this does not work	    PictureTester.testSetRedToHalfValueInTopHalf();
-// this does not work	    PictureTester.testClearBlueOverValue(200);
-//	 this does not work    PictureTester.testGetAverageForColumn(0);	
+//		this does not work	    PictureTester.testEdgeDetection2(); 		----- - carlos 
+// 		this does not work	    PictureTester.testChromakey(); 		----- carlos 
+//		this does not work	    PictureTester.testEncodeAndDecode(); 		------ carlos
+//		this does not work	    PictureTester.testGetCountRedOverValue(250);			--- carlos 
+// this does not work	    PictureTester.testSetRedToHalfValueInTopHalf(); 			---- coco
+// this does not work	    PictureTester.testClearBlueOverValue(200);			----- coco
+//	 this does not work    PictureTester.testGetAverageForColumn(0);				---coco
 //		
-
 	}	
 
 }
-
