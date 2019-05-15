@@ -33,11 +33,11 @@ public class Menu {
 					Scanner userInput3 = new Scanner(System.in);
 					System.out.println("(1) keep only blue");
 					System.out.println("(2) remove blue");
-					System.out.println("(3) keep only red");
-					System.out.println("(4) keep only green");
-					System.out.println("(5) negate");
-					System.out.println("(6) grayscale");
-					System.out.println("(7) change stache");
+					//System.out.println("(3) keep only red");
+					//System.out.println("(4) keep only green");
+					System.out.println("(3) negate");
+					System.out.println("(4) grayscale");
+					System.out.println("(5) change stache");
 					int choice1 = userInput3.nextInt();
 					
 					switch (choice1)
@@ -66,18 +66,18 @@ public class Menu {
 //						PictureTester.keepOnlyGreen();
 //						break;
 //					}
-			case 5:
+			case 3:
 					{
 						PictureTester.negate();
 						break;
 					}
 					
-					case 6:
+					case 4:
 					{
 						PictureTester.grayscale();
 						break;
 					}
-					case 7:
+					case 5:
 					{
 						
 					    Scanner Blue1 = new Scanner(System.in);
@@ -97,15 +97,15 @@ public class Menu {
 					}
 				}
 	
-					
+					break;
 				}
 				case 2:
 				{
 					Scanner userInput4 = new Scanner(System.in);
 					System.out.println("(1) mirror horizontal");
-					System.out.println("(2) mirror horizontal bottom to top");
-					System.out.println("(3) mirror vertical ");
-					System.out.println("(4) mirror vertical right to left");
+					//System.out.println("(2) mirror horizontal bottom to top");
+					System.out.println("(2) mirror vertical ");
+					System.out.println("(3) mirror vertical right to left");
 				//	System.out.println("(5) mirror diagonal");
 					int choice = userInput4.nextInt();
 				
@@ -118,19 +118,19 @@ public class Menu {
 							break;
 						}
 						
+//						case 2:
+//						{
+//							//PictureTester.mirrorHorizontalBotToTop();
+//							break;
+//						}
+//						
 						case 2:
-						{
-							//PictureTester.mirrorHorizontalBotToTop();
-							break;
-						}
-						
-						case 3:
 						{
 							 PictureTester.testMirrorVertical();
 							 break;
 						}
 						
-						case 4:
+						case 3:
 						{
 							 PictureTester.mirrorVerticalRightToLeft();
 							 break;
