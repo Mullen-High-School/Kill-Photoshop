@@ -151,6 +151,24 @@ public class Picture extends SimplePicture
     		}
     	}
 	}
+	
+	public void mirrorDiagonal()
+	{
+		Pixel[][] pixels = this.getPixels2D();
+	    Pixel leftPixel = null;
+	    Pixel rightPixel = null;
+	    int width = pixels[1].length - 1;
+	    for (int row = 0; row < pixels.length - 1; row++)
+	    	{
+	    	for (int col = 0; col < pixels.length - 1; col++)
+	    		{
+		        rightPixel = pixels[col][row];
+		        leftPixel = pixels[row][col];
+		        rightPixel.setColor(leftPixel.getColor());
+	    		}
+	    	} 
+		}
+	
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
@@ -206,6 +224,53 @@ public class Picture extends SimplePicture
 	        rightPixel.setColor(leftPixel.getColor());
     		}
     	} 
+	}
+	
+	public void mirrorHorizontalBotToTop()
+	
+	{
+		 Pixel[][] pixels = this.getPixels2D();
+		    Pixel leftPixel = null;
+		    Pixel rightPixel = null;
+		    int height = pixels.length;
+		    
+		    for (int col =  0; col < pixels[0].length; col++)
+		    	{
+		    	for (int row = 0; row < height / 2; row++)
+		    		{
+			        rightPixel = pixels[row][col];
+			        leftPixel = pixels[height - 1- row][col];
+			        rightPixel.setColor(leftPixel.getColor());
+		    		}
+		    	} 
+	}
+	
+	public void changeStache()
+	{
+		Pixel[][] pixels = this.getPixels2D();
+	    Pixel leftPixel = null;
+	    Pixel rightPixel = null;
+	    int width = pixels[0].length;
+	    for (int row = 0; row < pixels.length; row++)
+	    	{
+	    	for (int col = 0; col < width / 2; col++)
+	    		{
+	    		if(((pixels[row][col].getRed() > 88) && pixels[row][col].getRed() < 120) &&
+	    				(pixels[row][col].getBlue() > 30) && (pixels[row][col].getBlue() < 50) &&
+	    				(pixels[row][col].getGreen() > 50) && (pixels[row][col].getGreen() < 80))
+				{
+	    				rightPixel.setGreen(0);
+	    				leftPixel.setGreen(0);
+	    				rightPixel.setRed(0);
+	    				leftPixel.setRed(0);
+	    				rightPixel.setBlue(0);
+	    				leftPixel.setBlue(0);
+				}
+		        leftPixel = pixels[row][col];
+		        rightPixel = pixels[row][col];
+		        rightPixel.setColor(leftPixel.getColor());
+	    		}
+	    	} 
 	}
 	
 	public void mirrorArms()
