@@ -1,6 +1,8 @@
 import java.awt.*;
 import java.awt.event.ActionListener;
+
 import java.util.Scanner;
+
 import javax.swing.*;
 
 
@@ -8,6 +10,7 @@ public class Runner extends Picture
 	{
 		private static JMenuBar menuBar = new JMenuBar();
 		private static JMenu menu = new JMenu("IDK");
+
 		private static Scanner userInput = new Scanner(System.in);
 		
 		public static void main(String[] args)
@@ -51,6 +54,7 @@ public class Runner extends Picture
 							System.out.println("Not a valid choice, please choose again.");
 						}
 					}
+
 				
 			}
 

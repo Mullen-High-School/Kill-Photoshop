@@ -11,28 +11,115 @@ public class PictureTester
   /** Method to test zeroBlue */
   public static void testZeroBlue()
   {
-    Picture beach = new Picture("beach.jpg");
-    beach.explore();
-    beach.zeroBlue();
-    beach.explore();
+    Picture swan = new Picture("swan.jpg");
+    swan.explore();
+    swan.zeroBlue();
+    swan.explore();
   }
+  
+  public static void testZeroRed()
+	  {
+	    Picture swan = new Picture("swan.jpg");
+	    swan.explore();
+	    swan.zeroRed();
+	    swan.explore();
+	  }
+  
+  public static void testZeroGreen()
+	  {
+	    Picture swan = new Picture("swan.jpg");
+	    swan.explore();
+	    swan.zeroGreen();
+	    swan.explore();
+	  }
   
   public static void testKeepOnlyBlue()
 	  {
-	    Picture beach = new Picture("beach.jpg");
-	    beach.explore();
-	    beach.keepOnlyBlue();
-	    beach.explore();
+	    Picture swan = new Picture("swan.jpg");
+	    swan.explore();
+	    swan.keepOnlyBlue();
+	    swan.explore();
+	    
 	  }
   
-  /** Method to test mirrorVertical */
-  public static void testMirrorVertical()
+  public static void testKeepOnlyRed()
+	  {
+	    Picture swan = new Picture("swan.jpg");
+	    swan.explore();
+	    swan.keepOnlyRed();
+	    swan.explore();
+	  }
+  
+  public static void testKeepOnlyGreen()
+	  {
+	    Picture swan = new Picture("swan.jpg");
+	    swan.explore();
+	    swan.keepOnlyGreen();
+	    swan.explore();
+	  }
+  
+  public static void testNegate()
   {
+	  Picture swan = new Picture("swan.jpg");
+	  swan.explore();
+	  swan.negate();
+	  swan.explore();
+  }
+  
+  public static void testGrayscale()
+	  {
+		  Picture swan = new Picture("swan.jpg");
+		  swan.explore();
+		  swan.grayscale();
+		  swan.explore();
+	  }
+  
+  
+  /** Method to test mirrorVertical */
+  public  void testMirrorVertical()
+  {
+
     Picture caterpillar = new Picture("caterpillar.jpg");
     caterpillar.explore();
-    caterpillar.mirrorVerticalRightToLeft();
-    caterpillar.explore();
+   caterpillar.mirrorVerticalRightToLeft();
+   caterpillar.explore();
+	  
+	  Pixel[][] pixels = this.getPixels2D();
+	  Pixel leftPixel = null;
+	  Pixel rightPixel = null;
+		 
+	  int width = pixels[0].length;
+		 
+		 for (int row = 0; row < pixels.length; row++)
+			 {
+				 for (int col = 0; col < width / 2; col++)
+					 {
+						 leftPixel = pixels[row][col];
+						 rightPixel = pixels[row][width - 1 - col];
+						 rightPixel.setColor(leftPixel.getColor());
+					 }
+			 }
   }
+  
+  /** Method to test mirrorVerticalRightToLeft */
+  public static void testMirrorVerticalRightToLeft()
+  {
+	 Pixel[][] pixels = this.getPixels2D();
+	 Pixel leftPixel = null;
+	 Pixel rightPixel = null;
+	 
+	 int width = pixels[0].length;
+	 
+	 for (int row = 0; row < pixels.length; row++)
+		 {
+			 for (int col = 0; col < width / 2; col++)
+				 {
+					 leftPixel = pixels[row][col];
+					 rightPixel = pixels[row][width - 1 - col];
+					 rightPixel.setColor(leftPixel.getColor());
+				 }
+		 }
+	}
   
   /** Method to test mirrorHorizontal */
   public static void testMirrorHorizontal()
@@ -55,6 +142,7 @@ public class PictureTester
 	  koala.explore();
   }
   
+
   /** Method to test mirrorTemple */
   public static void testMirrorTemple()
   {
@@ -63,36 +151,7 @@ public class PictureTester
     temple.mirrorTemple();
     temple.explore();
   }
-  public static void testNegate(){
-	  Picture beach = new Picture("beach.jpg");
-	    beach.explore();
-	    beach.negate();
-	    beach.explore();
-  }
   
-  public static void testGrayscale(){
-	  Picture beach = new Picture("beach.jpg");
-	    beach.explore();
-	    beach.grayscale();
-	    beach.explore();
-  }
-  public static void testFixUnderwater(){
-	  Picture water = new Picture("water.jpg");
-	  water.explore();
-	  water.fixUnderwater();
-	  water.explore();
-  }
-  
-
-  public static void testMirrorArms()
-  {
-	  Picture snowman = new Picture("snowman.jpg");
-	  snowman.explore();
-	  snowman.mirrorArms();
-	  snowman.explore();
-  }
-  
-
   /** Method to test the collage method */
   public static void testCollage()
   {
@@ -109,21 +168,28 @@ public class PictureTester
     swan.explore();
   }
   
+
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
   {
-    // uncomment a call here to run a test
-    // and comment out the ones you don't want
-    // to run
-
-    //testZeroBlue();
-    //testKeepOnlyBlue();
+	  //Zero Blue, Red, Green : Taylor 
+	//testZeroBlue();
+    //testZeroRed();
+    //testZeroGreen();
+    
+	  //KeepOnly Blue, Red, Green : Taylor
+	//testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    //testNegate();
-    //testGrayscale();
+    
+	  //Negate : Taylor
+	//testNegate();
+	  
+	  
+    testGrayscale();
     //testFixUnderwater();
+	  
     //testMirrorVertical();
 
 	//testMirrorHorizontal();
@@ -133,6 +199,7 @@ public class PictureTester
     //testMirrorArms();
     //testMirrorGull();
     //testMirrorDiagonal();
+	  
     //testCollage();
     //testCopy();
     //testEdgeDetection();
@@ -145,9 +212,10 @@ public class PictureTester
     //testGetAverageForColumn(0);
   }
 
-private static void testCopy()
+
+public static void testCopy()
 	{
-		// TODO Auto-generated method stub
+		System.out.println("Hello!");
 		
 	}
 }
