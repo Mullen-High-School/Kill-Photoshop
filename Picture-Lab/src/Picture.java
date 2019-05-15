@@ -4,7 +4,9 @@ import java.awt.geom.*;
 import java.awt.image.BufferedImage;
 import java.text.*;
 import java.util.*;
-import java.util.List; // resolves problem with java.awt.List and java.util.List
+import java.util.List;
+import java.io.File;
+import java.util.Scanner; // resolves problem with java.awt.List and java.util.List
 /**
  * A class that represents a picture.  This class inherits from 
  * SimplePicture and allows the student to add functionality to
@@ -300,110 +302,6 @@ public class Picture extends SimplePicture
 	    	}
 		}
 	
-	public void keepOnlyBlue()
-		{
-	    Pixel[][] pixels = this.getPixels2D();
-	    for (Pixel[] rowArray : pixels)
-	    	{
-	    	for (Pixel pixelObj : rowArray)
-	    		{
-	    		pixelObj.setGreen(0);
-	    		pixelObj.setRed(0);
-	    		}
-	    	}
-		}
-	
-	public void negate()
-	{
-		Pixel[][] pixels = this.getPixels2D();
-	    for (Pixel[] rowArray : pixels)
-	    	{
-	    	for (Pixel pixelObj : rowArray)
-	    		{
-	    		pixelObj.setRed(255 - pixelObj.getRed());
-	    		pixelObj.setGreen(255 - pixelObj.getGreen());
-	    		pixelObj.setBlue(255 - pixelObj.getBlue());
-	    		}
-	    	}
-	}
-	
-	public void grayscale()
-	{
-		Pixel[][] pixels = this.getPixels2D();
-	    for (Pixel[] rowArray : pixels)
-	    	{
-	    	for (Pixel pixelObj : rowArray)
-	    		{
-	    			int average = (pixelObj.getRed() + pixelObj.getBlue() + pixelObj.getGreen()) / 3;
-		    		pixelObj.setRed(average);
-		    		pixelObj.setGreen(average);
-		    		pixelObj.setBlue(average);
-	    		}
-	    	}
-	}
-	
-	public void fixUnderwater()
-	{
-		Pixel[][] pixels = this.getPixels2D();
-	    for (Pixel[] rowArray : pixels)
-	    	{
-	    	for (Pixel pixelObj : rowArray)
-	    		{
-	    			pixelObj.setRed(pixelObj.getRed()*4);
-	    		}
-	    	}
-	}
-	
-	public void mirrorVerticalRightToLeft()
-	{
-		 Pixel[][] pixels = this.getPixels2D();
-		    Pixel leftPixel = null;
-		    Pixel rightPixel = null;
-		    int width = pixels[0].length;
-		    for (int row = 0; row < pixels.length; row++)
-		    	{
-		    	for (int col = width/2; col >= 0; col--)
-		    		{
-			        leftPixel = pixels[row][col];
-			        rightPixel = pixels[row][width - 1 - col];
-			        leftPixel.setColor(rightPixel.getColor());
-		    		}
-		    	} 
-	}
-	
-	public void mirrorHorizontal()
-	{
-		Pixel[][] pixels = this.getPixels2D();
-	    Pixel topPixel = null;
-	    Pixel bottomPixel = null;
-	    int width = pixels.length;
-	    for (int row = 0; row < width/2; row++)
-	    	{
-	    	for (int col = 0; col < pixels[0].length; col++)
-	    		{
-		        topPixel = pixels[row][col];
-		        bottomPixel = pixels[width - 1 - row][col];
-		        bottomPixel.setColor(topPixel.getColor());
-	    		}
-	    	} 
-	}
-	
-	public void mirrorHorizontalBotToTop()
-	{
-		Pixel[][] pixels = this.getPixels2D();
-	    Pixel topPixel = null;
-	    Pixel bottomPixel = null;
-	    int width = pixels.length;
-	    for (int row = 0; row < width/2; row++)
-	    	{
-	    	for (int col = 0; col < pixels[0].length; col++)
-	    		{
-		        topPixel = pixels[row][col];
-		        bottomPixel = pixels[width - 1 - row][col];
-		        topPixel.setColor(bottomPixel.getColor());
-	    		}
-	    	} 
-	}
 	
 	public void mirrorDiagonal()
 	{
@@ -448,9 +346,210 @@ public class Picture extends SimplePicture
    */
 	public static void main(String[] args) 
 		{
-	    Picture beach = new Picture("beach.jpg");
-	    beach.explore();
-	    beach.zeroBlue();
-	    beach.explore();
+			Scanner userInput = new Scanner(System.in);
+			Picture userPicture;
+			System.out.println("Choose a picture you would like to modify");
+			File file = new File("C:\\Users\\skywi\\git\\Kill-Photoshop\\Picture-Lab\\images");
+			File[] files = file.listFiles();
+			int i = 1;
+			for(File f: files)
+				{
+					System.out.println(i + ". " + f.getName());
+					i++;
+				}
+			int pictureChoice = userInput.nextInt();
+			if(pictureChoice == 1)
+				{
+					userPicture = new Picture("640x480.jpg");
+				}
+			else if(pictureChoice == 2)
+				{
+					userPicture = new Picture("7inX95in.jpg");
+				}
+			else if(pictureChoice == 3)
+				{
+					userPicture = new Picture("arch.jpg");
+				}
+			else if(pictureChoice == 4)
+				{
+					userPicture = new Picture("barbaraS.jpg");
+				}
+			else if(pictureChoice == 5)
+				{
+					userPicture = new Picture("beach.jpg");
+				}
+			else if(pictureChoice == 6)
+				{
+					userPicture = new Picture("blue-mark.jpg");
+				}
+			else if(pictureChoice == 7)
+				{
+					userPicture = new Picture("blueMotorcycle.jpg");
+				}
+			else if(pictureChoice == 8)
+				{
+					userPicture = new Picture("butterfly1.jpg");
+				}
+			else if(pictureChoice == 9)
+				{
+					userPicture = new Picture("caterpillar.jpg");
+				}
+			else if(pictureChoice == 10)
+				{
+					userPicture = new Picture("collage.jpg");
+				}
+			else if(pictureChoice == 11)
+				{
+					userPicture = new Picture("CumberlandIsland.jpg");
+				}
+			else if(pictureChoice == 12)
+				{
+					userPicture = new Picture("femaleLionAndHall.jpg");
+				}
+			else if(pictureChoice == 13)
+				{
+					userPicture = new Picture("flower1.jpg");
+				}
+			else if(pictureChoice == 14)
+				{
+					userPicture = new Picture("flower2.jpg");
+				}
+			else if(pictureChoice == 15)
+				{
+					userPicture = new Picture("gorge.jpg");
+				}
+			else if(pictureChoice == 16)
+				{
+					userPicture = new Picture("jenny-red.jpg");
+				}
+			else if(pictureChoice == 17)
+				{
+					userPicture = new Picture("KatieFancy.jpg");
+				}
+			else if(pictureChoice == 18)
+				{
+					userPicture = new Picture("kitten2.jpg");
+				}
+			else if(pictureChoice == 19)
+				{
+					userPicture = new Picture("koala.jpg");
+				}
+			else if(pictureChoice == 20)
+				{
+					userPicture = new Picture("moon-surface.jpg");
+				}
+			else if(pictureChoice == 21)
+				{
+					userPicture = new Picture("msg.jpg");
+				}
+			else if(pictureChoice == 22)
+				{
+					userPicture = new Picture("redMotorcycle.jpg");
+				}
+			else if(pictureChoice == 23)
+				{
+					userPicture = new Picture("robot.jpg");
+				}
+			else if(pictureChoice == 24)
+				{
+					userPicture = new Picture("seagull.jpg");
+				}
+			else if(pictureChoice == 25)
+				{
+					userPicture = new Picture("snowman.jpg");
+				}
+			else if(pictureChoice == 26)
+				{
+					userPicture = new Picture("swan.jpg");
+				}
+			else if(pictureChoice == 27)
+				{
+					userPicture = new Picture("temple.jpg");
+				}
+			else if(pictureChoice == 28)
+				{
+					userPicture = new Picture("thruDoor.jpg");
+				}
+			else if(pictureChoice == 29)
+				{
+					userPicture = new Picture("Thumbs.db");
+				}
+			else if(pictureChoice == 30)
+				{
+					userPicture = new Picture("wall.jpg");
+				}
+			else if(pictureChoice == 31)
+				{
+					userPicture = new Picture("water.jpg");
+				}
+			else
+				{
+					userPicture = new Picture("whiteFlower.jpg");
+				}
+			
+		userPicture.explore();	
+	    System.out.println("What would you like to do with this picture?");
+	    System.out.println("1. Zero Blue");
+	    System.out.println("2. Keep Only Blue");
+	    System.out.println("3. Mirror Vertical");
+	    System.out.println("4. Mirror Horizontal");
+	    System.out.println("5. Mirror Diagonal");
+	    System.out.println("6. Negate");
+	    System.out.println("7. Gray Scale");
+	    System.out.println("8. Fix Underwater");
+	    System.out.println("9. Collage");
+	    System.out.println("10. Edge Detection");
+	    
+	    int modifying = userInput.nextInt();
+	    if(modifying == 1)
+	    	{
+	    		userPicture.zeroBlue();
+	    	}
+	    else if(modifying == 2)
+	    	{
+	    		userPicture.keepOnlyBlue();
+	    	}
+	    else if(modifying == 3)
+	    	{
+	    		userPicture.mirrorVertical();
+	    	}
+	    else if(modifying == 4)
+	    	{
+	    		userPicture.mirrorHorizontal();
+	    	}
+	    else if(modifying == 5)
+	    	{
+	    		userPicture.mirrorDiagonal();
+	    	}
+	    else if(modifying == 6)
+	    	{
+	    		userPicture.negate();
+	    	}
+	    else if(modifying == 7)
+	    	{
+	    		userPicture.grayscale();
+	    	}
+	    else if(modifying == 8)
+	    	{
+	    		userPicture.fixUnderwater();
+	    	}
+	    else if(modifying == 9)
+	    	{
+	    		userPicture.createCollage();
+	    	}
+	    else 
+	    	{
+	    		userPicture.edgeDetection(10);
+	    	}
+	   userPicture.explore();
+	   
+	   Scanner userInput1 = new Scanner(System.in);
+	   System.out.println("Do you want to do something else? (Yes or No)");
+	   String again = userInput1.nextLine();
+	   if(again.toLowerCase().equals("yes"))
+		   Runner.main(args);
+	   else
+		   System.exit(0);
+	   
 		}
 	} // this } is the end of class Picture, put all new methods before this

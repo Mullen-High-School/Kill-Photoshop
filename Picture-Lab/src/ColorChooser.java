@@ -1,6 +1,7 @@
 import javax.swing.JColorChooser;
 import javax.swing.JFrame;
 import java.awt.Color;
+import java.util.Scanner;
   
 /**
  * A class to make working with a color chooser easier
@@ -33,7 +34,14 @@ public class ColorChooser
   /** Main method for testing the ColorChooser */
 	public static void main(String[] args)
 		{
+			Scanner userInput = new Scanner(System.in);
 		Color pickedColor = ColorChooser.pickAColor();
 		System.out.println(pickedColor);
+		System.out.println("Would you like to do something else? (Yes or No)");
+		String again = userInput.nextLine();
+		if(again.toLowerCase().equals("yes"))
+			Runner.main(args);
+		else
+			System.exit(0);
 		}
 	}
