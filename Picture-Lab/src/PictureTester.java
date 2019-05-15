@@ -134,13 +134,13 @@ public class PictureTester
 	    caterpillar.explore();
   }
   
-  public static void mirrorArms()
-  {
-	  Picture caterpillar = new Picture("Bo.jpg");
-	    caterpillar.explore();
-	    caterpillar.mirrorArms();
-	    caterpillar.explore();
-  }
+//  public static void mirrorArms()
+//  {
+//	  Picture caterpillar = new Picture("Bo.jpg");
+//	    caterpillar.explore();
+//	    caterpillar.mirrorArms();
+//	    caterpillar.explore();
+//  }
   
   /** Method to test the collage method */
   public static void testCollage()
