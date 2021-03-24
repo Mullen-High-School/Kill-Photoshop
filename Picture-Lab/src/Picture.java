@@ -204,6 +204,51 @@ public class Picture extends SimplePicture
 	    		}
 	    	}
 		}
+	/** Mirror just part of a picture of a temple */
+	public void mirrorArms()
+		{
+	    int mirrorPoint = 206;
+	    Pixel leftPixel = null;
+	    Pixel rightPixel = null;
+	    int count = 0;
+	    Pixel[][] pixels = this.getPixels2D();
+    
+    // loop through the rows
+	    for (int row = 76; row < 300; row++)
+	    	{
+      // loop from 13 to just before the mirror point
+	    	for (int col = 104; col < mirrorPoint; col++)
+	    		{
+		        leftPixel = pixels[row][col];      
+		        rightPixel = pixels[row]                       
+		                         [mirrorPoint - col + mirrorPoint];
+		        rightPixel.setColor(leftPixel.getColor());
+	    		}
+	    	}
+		}
+	
+	 /** Mirror just part of a picture of a temple */
+		public void mirrorGull()
+			{
+		    int mirrorPoint = 346;
+		    Pixel leftPixel = null;
+		    Pixel rightPixel = null;
+		    int count = 0;
+		    Pixel[][] pixels = this.getPixels2D();
+	    
+	    // loop through the rows
+		    for (int row = 234; row < 326; row++)
+		    	{
+	      // loop from 13 to just before the mirror point
+		    	for (int col = 230; col < mirrorPoint; col++)
+		    		{
+			        leftPixel = pixels[row][col];      
+			        rightPixel = pixels[row]                       
+			                         [mirrorPoint - col + mirrorPoint];
+			        rightPixel.setColor(leftPixel.getColor());
+		    		}
+		    	}
+			}
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
     * current picture
