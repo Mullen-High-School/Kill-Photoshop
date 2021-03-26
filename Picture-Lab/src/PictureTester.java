@@ -66,13 +66,19 @@ public class PictureTester
 	  beach.negateThatThing();
 	  beach.explore();
   }
-  public static void testGreyscale() {
+  public static void testGrayscale() {
 	  Picture beach = new Picture("beach.jpg");
 	  beach.explore();
 	  beach.grayscaleThatThing();
 	  beach.explore();
   }
   
+  public static void testFixUnderwater() {
+	  Picture water = new Picture("water.jpg");
+	  water.explore();
+	  water.fixUnderwater();
+	  water.explore();
+  }
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -84,9 +90,9 @@ public class PictureTester
 //    testKeepOnlyBlue();
     //testKeepOnlyRed();
     //testKeepOnlyGreen();
-    testNegate();
-    //testGrayscale();
-    //testFixUnderwater();
+//    testNegate();
+//    testGrayscale();
+    testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();

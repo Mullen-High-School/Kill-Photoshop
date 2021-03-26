@@ -117,10 +117,23 @@ public class Picture extends SimplePicture
     	{
 			for (Pixel pixelObj : rowArray)
     			{
-				int avg = ()
-				pixelObj.setGreen(255-pixelObj.getGreen());
-				pixelObj.setRed(255-pixelObj.getRed());
-				pixelObj.setBlue(255-pixelObj.getBlue());
+				int avg = (pixelObj.getBlue()+pixelObj.getGreen()+pixelObj.getRed())/3;
+				pixelObj.setGreen(avg);
+				pixelObj.setRed(avg);
+				pixelObj.setBlue(avg);
+    			}
+    	}
+	}
+	public void fixUnderwater() {
+		Pixel[][] pixels = this.getPixels2D();
+
+		for (Pixel[] rowArray : pixels)
+    	{
+			for (Pixel pixelObj : rowArray)
+    			{
+				pixelObj.setGreen(0);
+				pixelObj.setGreen(pixelObj.getBlue()-50);
+				
     			}
     	}
 	}
