@@ -87,6 +87,68 @@ public class Picture extends SimplePicture
 	    		}
 	    	}
 		}
+	
+	// Keep only blue method
+	public void keepOnlyBlue()
+	{
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    	{
+    	for (Pixel pixelObj : rowArray)
+    		{
+    		pixelObj.setRed(0);
+    		pixelObj.setGreen(0);
+    		}
+    	}
+	}
+	
+	public void negate()
+	{
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    	{
+    	for (Pixel pixelObj : rowArray)
+    		{
+    		pixelObj.setBlue(-255);
+    		pixelObj.setGreen(-255);
+    		pixelObj.setRed(-255);
+    		}
+    	}
+	}
+	//Grayscale 
+	public void grayscale()
+	{
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    	{
+    	for (Pixel pixelObj : rowArray)
+    		{
+    		int red = pixelObj.getRed();
+    		int green = pixelObj.getGreen();
+    		int blue = pixelObj.getBlue();
+    		
+    		int average = (red + green + blue)/3;
+    		
+    		pixelObj.setRed(average);
+    		pixelObj.setGreen(average);
+    		pixelObj.setBlue(average);    		}
+    	}
+	}
+	
+	//fish finder
+	public void fishFinder()
+	{
+    Pixel[][] pixels = this.getPixels2D();
+    for (Pixel[] rowArray : pixels)
+    	{
+    	for (Pixel pixelObj : rowArray)
+    		{
+    		int green = pixelObj.getGreen();
+    		pixelObj.setGreen(green-50);
+    		}
+    	}
+	}
+	
   /** Method that mirrors the picture around a 
     * vertical mirror in the center of the picture
     * from left to right */
@@ -204,8 +266,16 @@ public class Picture extends SimplePicture
 	public static void main(String[] args) 
 		{
 	    Picture beach = new Picture("beach.jpg");
+	    Picture water = new Picture("water.jpg");
 	    beach.explore();
-	    beach.zeroBlue();
+	    //beach.zeroBlue();
+	    //beach.keepOnlyBlue();
+	    //beach.negate();
+	    water.explore();
+	    water.fishFinder();
+	    //water.grayscale();
+	    beach.grayscale();
 	    beach.explore();
+	    water.explore();
 		}
 	} // this } is the end of class Picture, put all new methods before this
