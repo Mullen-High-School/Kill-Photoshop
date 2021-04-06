@@ -274,6 +274,64 @@ public class Picture extends SimplePicture
 	    		}
 	    	}
 		}
+	
+	public void mirrorArms()
+	{
+    int mirrorPoint = 195;
+    Pixel topPixel = null;
+    Pixel bottomPixel = null;
+    int count = 0;
+    Pixel[][] pixels = this.getPixels2D();
+    
+    for (int col = 236; col < 294; col++)
+    	{
+    	
+    	for (int row =169; row < mirrorPoint; row++)
+    		{
+	        topPixel = pixels[row][col];      
+	        bottomPixel = pixels[mirrorPoint - row + mirrorPoint]                       
+	                         [col];
+	        bottomPixel.setColor(topPixel.getColor());
+    		}
+    	}
+    
+    for (int col = 105; col < 168; col++)
+	{
+	
+	for (int row =169; row < mirrorPoint; row++)
+		{
+        topPixel = pixels[row][col];      
+        bottomPixel = pixels[mirrorPoint - row + mirrorPoint]                       
+                         [col];
+        bottomPixel.setColor(topPixel.getColor());
+		}
+	}
+    
+    	
+	}
+	
+	public void mirrorGull()
+	{
+    int mirrorPoint = 341;
+    Pixel leftPixel = null;
+    Pixel rightPixel = null;
+    int count = 0;
+    Pixel[][] pixels = this.getPixels2D();
+    for (int row = 234; row < 320; row++)
+    	{
+
+    	for (int col = 237; col < mirrorPoint; col++)
+    		{
+	        leftPixel = pixels[row][col];      
+	        rightPixel = pixels[row]                       
+	                         [mirrorPoint - col + mirrorPoint];
+	        rightPixel.setColor(leftPixel.getColor());
+    		}
+    	}
+	}
+	
+	
+	
   /** copy from the passed fromPic to the
     * specified startRow and startCol in the
     * current picture
@@ -351,13 +409,25 @@ public class Picture extends SimplePicture
 		{
 	    Picture beach = new Picture("beach.jpg");
 	    Picture water = new Picture("water.jpg");
-	    beach.explore();
+	    Picture temple = new Picture("temple.jpg");
+	    Picture snowman = new Picture("snowman.jpg");
+	    Picture seagull = new Picture("seagull.jpg");
+	    temple.explore();
+	    temple.mirrorTemple();
+	    temple.explore();
+	    snowman.explore();
+	    snowman.mirrorArms();
+	    snowman.explore();
+	    seagull.explore();
+	    seagull.mirrorGull();
+	    seagull.explore();
+	    //beach.explore();
 	    //beach.zeroBlue();
 	    //beach.keepOnlyBlue();
 	    //beach.negate();
 	    //beach.mirrorVertical();
-	    beach.mirrorDiagonal();
-	    beach.explore();
+	    //beach.mirrorDiagonal();
+	    //beach.explore();
 	    //water.fishFinder();
 	    //water.grayscale();
 	    //beach.grayscale();
