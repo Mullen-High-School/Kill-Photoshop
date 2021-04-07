@@ -242,6 +242,8 @@ public class Picture extends SimplePicture
 				}
 				}
 			}
+			
+			
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
@@ -252,7 +254,8 @@ public class Picture extends SimplePicture
 	    //beach.zeroBlue();
 	    //beach.keepOnlyBlue();
 	    //beach.negate();
-	    beach.grayscale();
+	    //beach.grayscale();
+	    beach.fixUnderwater();
 	    beach.explore();
 		}
 	} // this } is the end of class Picture, put all new methods before this
