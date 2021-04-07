@@ -198,6 +198,34 @@ public class Picture extends SimplePicture
 	    		}
 	    	}
 		}
+	  /** Method to set the red and green values to 0 */
+		public void keepOnlyBlue()
+			{
+		    Pixel[][] pixels = this.getPixels2D();
+		    for (Pixel[] rowArray : pixels)
+		    	{
+		    	for (Pixel pixelObj : rowArray)
+		    		{
+		    		pixelObj.setRed(0);
+		    		pixelObj.setGreen(0);
+		    		//Trying to push this again
+		    		}
+		    	}
+			}
+		  /** Method to set the red, green, and blue values to 255 minus where they started */
+			public void negate()
+				{
+			    Pixel[][] pixels = this.getPixels2D();
+			    for (Pixel[] rowArray : pixels)
+			    	{
+			    	for (Pixel pixelObj : rowArray)
+			    		{
+			    		pixelObj.setRed(255 - pixelObj.getRed());
+			    		pixelObj.setGreen(255 - pixelObj.getGreen());
+			    		pixelObj.setBlue(255 - pixelObj.getBlue());
+			    		}
+			    	}
+				}
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
@@ -205,7 +233,9 @@ public class Picture extends SimplePicture
 		{
 	    Picture beach = new Picture("beach.jpg");
 	    beach.explore();
-	    beach.zeroBlue();
+	    //beach.zeroBlue();
+	    //beach.keepOnlyBlue();
+	    beach.negate();
 	    beach.explore();
 		}
 	} // this } is the end of class Picture, put all new methods before this
