@@ -226,6 +226,22 @@ public class Picture extends SimplePicture
 			    		}
 			    	}
 				}
+			
+			//Method to turn the picture into shades of gray
+			public void grayscale()
+			{
+				Pixel[][] pixels = this.getPixels2D();
+				for (Pixel[] rowArray : pixels)
+				{
+				for(Pixel pixelObj : rowArray)
+				{
+					int average = (pixelObj.getRed() + pixelObj.getGreen() + pixelObj.getBlue())/3;
+					pixelObj.setRed(average);
+					pixelObj.setGreen(average);
+					pixelObj.setBlue(average);
+				}
+				}
+			}
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
@@ -235,7 +251,8 @@ public class Picture extends SimplePicture
 	    beach.explore();
 	    //beach.zeroBlue();
 	    //beach.keepOnlyBlue();
-	    beach.negate();
+	    //beach.negate();
+	    beach.grayscale();
 	    beach.explore();
 		}
 	} // this } is the end of class Picture, put all new methods before this
