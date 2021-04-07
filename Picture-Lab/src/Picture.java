@@ -208,6 +208,7 @@ public class Picture extends SimplePicture
 		    		{
 		    		pixelObj.setRed(0);
 		    		pixelObj.setGreen(0);
+		    		//Trying to push this again
 		    		}
 		    	}
 			}
