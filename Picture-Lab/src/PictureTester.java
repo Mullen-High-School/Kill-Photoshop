@@ -54,7 +54,18 @@ public class PictureTester
   //Method to see fish more easily
   public static void testFixUnderwater()
   {
-	  //Super smart code goes here
+	  Picture water = new Picture("water.jpg");
+	  water.explore();
+	  
+  }
+  
+  /** Method to test mirrorVerticalRightToleft */
+  public static void testMirrorVerticalRightToLeft()
+  {
+    Picture caterpillar = new Picture("caterpillar.jpg");
+    caterpillar.explore();
+    caterpillar.mirrorVertical();
+    caterpillar.explore();
   }
   
   /** Main method for testing.  Every class can have a main
@@ -70,8 +81,9 @@ public class PictureTester
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
-    testFixUnderwater();
+    //testFixUnderwater();
     //testMirrorVertical();
+	  testMirrorVerticalRightToLeft();
     //testMirrorTemple();
     //testMirrorArms();
     //testMirrorGull();
