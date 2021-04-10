@@ -258,6 +258,7 @@ public class Picture extends SimplePicture
 				    		{
 				    		//Thinking I need to go through the top half regularly then
 				    		//almost reverse the process
+				    		System.out.println("Hi");
 				    		}
 				    	} 
 					}
