@@ -102,7 +102,7 @@ public class Picture extends SimplePicture
 	    		{
 		        leftPixel = pixels[row][col];
 		        rightPixel = pixels[row][width - 1 - col];
-		        rightPixel.setColor(leftPixel.getColor());
+		        leftPixel.setColor(rightPixel.getColor());
 	    		}
 	    	} 
 		}
@@ -198,14 +198,82 @@ public class Picture extends SimplePicture
 	    		}
 	    	}
 		}
+	  /** Method to set the red and green values to 0 */
+		public void keepOnlyBlue()
+			{
+		    Pixel[][] pixels = this.getPixels2D();
+		    for (Pixel[] rowArray : pixels)
+		    	{
+		    	for (Pixel pixelObj : rowArray)
+		    		{
+		    		pixelObj.setRed(0);
+		    		pixelObj.setGreen(0);
+		    		//Trying to push this again
+		    		}
+		    	}
+			}
+		  /** Method to set the red, green, and blue values to 255 minus where they started */
+			public void negate()
+				{
+			    Pixel[][] pixels = this.getPixels2D();
+			    for (Pixel[] rowArray : pixels)
+			    	{
+			    	for (Pixel pixelObj : rowArray)
+			    		{
+			    		pixelObj.setRed(255 - pixelObj.getRed());
+			    		pixelObj.setGreen(255 - pixelObj.getGreen());
+			    		pixelObj.setBlue(255 - pixelObj.getBlue());
+			    		}
+			    	}
+				}
+			
+			//Method to turn the picture into shades of gray
+			public void grayscale()
+			{
+				Pixel[][] pixels = this.getPixels2D();
+				for (Pixel[] rowArray : pixels)
+				{
+				for(Pixel pixelObj : rowArray)
+				{
+					int average = (pixelObj.getRed() + pixelObj.getGreen() + pixelObj.getBlue())/3;
+					pixelObj.setRed(average);
+					pixelObj.setGreen(average);
+					pixelObj.setBlue(average);
+				}
+				}
+			}
+			
+			  /** Method that mirrors the picture around a 
+			    * horizontal mirror in the center of the picture
+			    * from top to bottom */
+				public void mirrorHorizontal()
+					{
+				    Pixel[][] pixels = this.getPixels2D();
+				    Pixel leftPixel = null;
+				    Pixel rightPixel = null;
+				    int width = pixels[0].length;
+				    for (int row = 0; row < pixels.length / 2; row++)
+				    	{
+				    	for (int col = 0; col < width; col++)
+				    		{
+				    		//Thinking I need to go through the top half regularly then
+				    		//almost reverse the process
+				    		System.out.println("Hi");
+				    		}
+				    	} 
+					}
+			
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
 	public static void main(String[] args) 
 		{
 	    Picture beach = new Picture("beach.jpg");
-	    beach.explore();
-	    beach.zeroBlue();
-	    beach.explore();
+	    //beach.explore();
+	    //beach.zeroBlue();
+	    //beach.keepOnlyBlue();
+	    //beach.negate();
+	    //beach.grayscale();
+	    //beach.explore();
 		}
 	} // this } is the end of class Picture, put all new methods before this
