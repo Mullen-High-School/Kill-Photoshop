@@ -253,7 +253,7 @@ public class Picture extends SimplePicture
 					if(pixelObj.getBlue() > 175)
 					{
 						pixelObj.setBlue(pixelObj.getBlue() + 300);
-						pixelObj.setGreen(pixelObj.getGreen() - 50);
+						pixelObj.setGreen(pixelObj.getGreen() - 55);
 					}
 					}
 				}
