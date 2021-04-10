@@ -51,6 +51,8 @@ public class PictureTester
     swan.explore();
   }
   
+A5_EX6
+
   //Method to see fish more easily
   public static void testFixUnderwater()
   {
@@ -77,6 +79,7 @@ public class PictureTester
 	  caterpillar.explore();
   }
   
+ master
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -90,7 +93,10 @@ public class PictureTester
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
+ A5_EX6
+
     //testFixUnderwater();
+ master
     //testMirrorVertical();
 	//testMirrorVerticalRightToLeft();
 	  testMirrorHorizontal();
