@@ -51,12 +51,6 @@ public class PictureTester
     swan.explore();
   }
   
-  //Method to see fish more easily
-  public static void testFixUnderwater()
-  {
-	  //Super smart code goes here
-  }
-  
   /** Main method for testing.  Every class can have a main
     * method in Java */
   public static void main(String[] args)
@@ -70,7 +64,6 @@ public class PictureTester
     //testKeepOnlyGreen();
     //testNegate();
     //testGrayscale();
-    testFixUnderwater();
     //testMirrorVertical();
     //testMirrorTemple();
     //testMirrorArms();

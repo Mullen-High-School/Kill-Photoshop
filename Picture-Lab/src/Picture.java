@@ -243,19 +243,38 @@ public class Picture extends SimplePicture
 				}
 			}
 			
+			public void fixUnderwater()
+			{
+				Pixel[][] pixels = this.getPixels2D();
+				for(Pixel[] rowArray : pixels)
+				{
+					for(Pixel pixelObj : rowArray)
+					{
+					if(pixelObj.getBlue() > 175)
+					{
+						pixelObj.setBlue(pixelObj.getBlue() + 300);
+						pixelObj.setGreen(pixelObj.getGreen() - 50);
+					}
+					}
+				}
+			}
+			
 			
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
 	public static void main(String[] args) 
 		{
-	    Picture beach = new Picture("beach.jpg");
-	    beach.explore();
+	    //Picture beach = new Picture("beach.jpg");
+	    //beach.explore();
 	    //beach.zeroBlue();
 	    //beach.keepOnlyBlue();
 	    //beach.negate();
 	    //beach.grayscale();
-	    beach.fixUnderwater();
-	    beach.explore();
+		Picture water = new Picture("water.jpg");
+		water.explore();
+	    water.fixUnderwater();
+	    water.explore();
+	    //beach.explore();
 		}
 	} // this } is the end of class Picture, put all new methods before this
