@@ -102,7 +102,7 @@ public class Picture extends SimplePicture
 	    		{
 		        leftPixel = pixels[row][col];
 		        rightPixel = pixels[row][width - 1 - col];
-		        rightPixel.setColor(leftPixel.getColor());
+		        leftPixel.setColor(rightPixel.getColor());
 	    		}
 	    	} 
 		}
@@ -250,12 +250,11 @@ public class Picture extends SimplePicture
 	public static void main(String[] args) 
 		{
 	    Picture beach = new Picture("beach.jpg");
-	    beach.explore();
+	    //beach.explore();
 	    //beach.zeroBlue();
 	    //beach.keepOnlyBlue();
 	    //beach.negate();
 	    //beach.grayscale();
-	    beach.fixUnderwater();
-	    beach.explore();
+	    //beach.explore();
 		}
 	} // this } is the end of class Picture, put all new methods before this
