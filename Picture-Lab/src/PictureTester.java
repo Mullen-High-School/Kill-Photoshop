@@ -51,6 +51,7 @@ public class PictureTester
     swan.explore();
   }
   
+
   //Method to see fish more easily
   public static void testFixUnderwater()
   {
