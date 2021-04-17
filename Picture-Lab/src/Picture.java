@@ -87,25 +87,7 @@ public class Picture extends SimplePicture
 	    		}
 	    	}
 		}
-  /** Method that mirrors the picture around a 
-    * vertical mirror in the center of the picture
-    * from left to right */
-	public void mirrorVertical()
-		{
-	    Pixel[][] pixels = this.getPixels2D();
-	    Pixel leftPixel = null;
-	    Pixel rightPixel = null;
-	    int width = pixels[0].length;
-	    for (int row = 0; row < pixels.length; row++)
-	    	{
-	    	for (int col = 0; col < width / 2; col++)
-	    		{
-		        leftPixel = pixels[row][col];
-		        rightPixel = pixels[row][width - 1 - col];
-		        leftPixel.setColor(rightPixel.getColor());
-	    		}
-	    	} 
-		}
+  
   /** Mirror just part of a picture of a temple */
 	public void mirrorTemple()
 		{
@@ -242,8 +224,29 @@ public class Picture extends SimplePicture
 				}
 				}
 			}
-			
- A5_EX6
+
+	/** Method that mirrors the picture around a 
+	* vertical mirror in the center of the picture
+    * from left to right */
+	public void mirrorVertical()
+		{
+		  Pixel[][] pixels = this.getPixels2D();
+		  Pixel leftPixel = null;
+	      Pixel rightPixel = null;
+		  int width = pixels[0].length;
+			for (int row = 0; row < pixels.length; row++)
+				{
+				    for (int col = 0; col < width / 2; col++)
+				    	{
+					       leftPixel = pixels[row][col];
+					       rightPixel = pixels[row][width - 1 - col];
+					       leftPixel.setColor(rightPixel.getColor());
+				   		}
+			 	} 
+		}			
+	
+
+
 			public void fixUnderwater()
 			{
 				Pixel[][] pixels = this.getPixels2D();
@@ -261,25 +264,31 @@ public class Picture extends SimplePicture
 			}
 			
 
+
 			  /** Method that mirrors the picture around a 
 			    * horizontal mirror in the center of the picture
 			    * from top to bottom */
 				public void mirrorHorizontal()
 					{
-				    Pixel[][] pixels = this.getPixels2D();
-				    Pixel leftPixel = null;
-				    Pixel rightPixel = null;
-				    int width = pixels[0].length;
-				    for (int row = 0; row < pixels.length / 2; row++)
-				    	{
-				    	for (int col = 0; col < width; col++)
-				    		{
-				    		//Thinking I need to go through the top half regularly then
-				    		//almost reverse the process
-				    		System.out.println("Hi!");
-				    		}
-				    	} 
+					  Picture caterpillar = new Picture("caterpillar.jpg");
+					  Pixel[][] pixels = this.getPixels2D();
+					  Pixel topPixel = null;
+				      Pixel bottomPixel = null;
+					  int width = pixels[0].length;
+					  int midway = caterpillar.getHeight() / 2;
+					  for (int row = 0; row < pixels.length / 2; row++){       
+						  for (int col = 0; col < pixels[0].length; col++){                 
+						      topPixel = pixels[row][col];  
+						      bottomPixel = pixels[(pixels.length - 1) - row][col];       
+						      bottomPixel.setColor(topPixel.getColor());       
+						  }     
+						} 
 					}
+
+				
+			
+			
+
 
 
   /* Main method for testing - each class in Java can have a main 
