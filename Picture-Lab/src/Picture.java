@@ -251,51 +251,17 @@ public class Picture extends SimplePicture
 					{
 					  Picture caterpillar = new Picture("caterpillar.jpg");
 					  Pixel[][] pixels = this.getPixels2D();
-					  Pixel leftPixel = null;
-				      Pixel rightPixel = null;
+					  Pixel topPixel = null;
+				      Pixel bottomPixel = null;
 					  int width = pixels[0].length;
 					  int midway = caterpillar.getHeight() / 2;
-					  
-					  for (int row = 0; row < pixels.length; row++)
-						{
-						    for (int col = 0; col < width / 2; col++)
-						    	{
-							       leftPixel = pixels[row][col];
-							       if(row == 0)
-							       {
-							    	   rightPixel = pixels[row ][col];
-							       }
-							       else
-							       {
-							       rightPixel = pixels[row - col - 1][width];
-							       }
-							       leftPixel.setColor(rightPixel.getColor());
-						   		}
-					 	} 
-//						for (int row = 0; row < midway; row++)
-//							{
-//							    for (int col = 0; col < width; col++)
-//							    	{
-//								       leftPixel = pixels[row][col];
-//								       rightPixel = pixels[row][col];
-//								       leftPixel.setColor(rightPixel.getColor());
-//							   		}
-//							     		
-//								 	} 
-						 	
-						
-						//Doesn't reverse as intended
-//				for (int row = caterpillar.getHeight() / 2; row > 0; row--)
-//				{
-//				    for (int col = 0; col < width; col++)
-//				    	{
-//					       leftPixel = pixels[row][col];
-//					       rightPixel = pixels[row][col];
-//					       leftPixel.setColor(rightPixel.getColor());
-//				    	}
-//				  
-//				    
-//				}
+					  for (int row = 0; row < pixels.length / 2; row++){       
+						  for (int col = 0; col < pixels[0].length; col++){                 
+						      topPixel = pixels[row][col];  
+						      bottomPixel = pixels[(pixels.length - 1) - row][col];       
+						      bottomPixel.setColor(topPixel.getColor());       
+						  }     
+						} 
 					}
 				
 			
