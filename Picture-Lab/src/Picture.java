@@ -256,7 +256,8 @@ public class Picture extends SimplePicture
 					  int width = pixels[0].length;
 					  int midway = caterpillar.getHeight() / 2;
 					  for (int row = 0; row < pixels.length / 2; row++){       
-						  for (int col = 0; col < pixels[0].length; col++){                 
+						  for (int col = 0; col < pixels[0].length; col++)
+						  {                 
 						      topPixel = pixels[row][col];  
 						      bottomPixel = pixels[(pixels.length - 1) - row][col];       
 						      bottomPixel.setColor(topPixel.getColor());       
@@ -264,7 +265,30 @@ public class Picture extends SimplePicture
 						} 
 					}
 				
-			
+				 /** Method that mirrors the picture around a 
+				    * horizontal mirror in the center of the picture
+				    * from bottom to top */
+					public void mirrorHorizontalBottomToTop()
+						{
+						  Picture caterpillar = new Picture("caterpillar.jpg");
+						  Pixel[][] pixels = this.getPixels2D();
+						  Pixel topPixel = null;
+					      Pixel bottomPixel = null;
+						  int width = pixels[0].length;
+						  int midway = caterpillar.getHeight() / 2;
+
+					      for (int col = 0; col < width; col++)
+					      {       
+							  for (int row = 0; row < midway; row++)
+							  {                 
+							      topPixel = pixels[row][col];  
+							      bottomPixel = pixels[(pixels.length - 1) - row][col];       
+							      topPixel.setColor(bottomPixel.getColor());       
+							  }     
+							}  
+					      
+						}
+							
 			
   /* Main method for testing - each class in Java can have a main 
    * method 
