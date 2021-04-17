@@ -224,6 +224,7 @@ public class Picture extends SimplePicture
 				}
 				}
 			}
+
 	/** Method that mirrors the picture around a 
 	* vertical mirror in the center of the picture
     * from left to right */
@@ -244,6 +245,26 @@ public class Picture extends SimplePicture
 			 	} 
 		}			
 	
+
+
+			public void fixUnderwater()
+			{
+				Pixel[][] pixels = this.getPixels2D();
+				for(Pixel[] rowArray : pixels)
+				{
+					for(Pixel pixelObj : rowArray)
+					{
+					if(pixelObj.getBlue() > 175)
+					{
+						pixelObj.setBlue(pixelObj.getBlue() + 300);
+						pixelObj.setGreen(pixelObj.getGreen() - 55);
+					}
+					}
+				}
+			}
+			
+
+
 			  /** Method that mirrors the picture around a 
 			    * horizontal mirror in the center of the picture
 			    * from top to bottom */
@@ -263,20 +284,28 @@ public class Picture extends SimplePicture
 						  }     
 						} 
 					}
+
 				
 			
 			
+
+
+
   /* Main method for testing - each class in Java can have a main 
    * method 
    */
 	public static void main(String[] args) 
 		{
-	    Picture beach = new Picture("beach.jpg");
+	    //Picture beach = new Picture("beach.jpg");
 	    //beach.explore();
 	    //beach.zeroBlue();
 	    //beach.keepOnlyBlue();
 	    //beach.negate();
 	    //beach.grayscale();
+		//Picture water = new Picture("water.jpg");
+		//water.explore();
+	    //water.fixUnderwater();
+	    //water.explore();
 	    //beach.explore();
 		}
 	} // this } is the end of class Picture, put all new methods before this
