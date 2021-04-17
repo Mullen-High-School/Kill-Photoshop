@@ -286,7 +286,7 @@ public class Picture extends SimplePicture
 							      topPixel.setColor(bottomPixel.getColor());       
 							  }     
 							}  
-					      
+					      //Redo push
 						}
 							
 			
